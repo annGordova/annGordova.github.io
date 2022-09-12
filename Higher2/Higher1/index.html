@@ -1,0 +1,118 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>Гордова</title>
+  </head>
+<body>
+<ul>
+  <li> <a href="http://example.com">1. Абсолютная гиперссылка на главную страницу сайта example.com; </a> </li>
+  <li> <a href="https://example.com">2. Абсолютная гиперссылка на главную страницу сайта example.com в протоколе https; </a> </li>
+  <li> <a href="ftp://ftp.example.com/file.bin">3. Ссылка на файл на сервере FTP без авторизации; </a> </li>
+  <li> <a href="ftp://login:pass@example.com:21/file.bin;type=i">4. Ссылка на файл на сервере FTP с авторизацией; </a> </li>
+  <li> <a href="https://faunistics.com/wp-content/uploads/2019/07/2-10.jpg">5. Перейти к бегемотам на сайте worldanimals.com (ссылку на фрагмент страницы некоторого сайта); </a> </li>
+  <li> <a href="#picture">6. Перейти на фрагмент текущей страницы; </a> </li>
+  <li> <a href="https://www.wildberries.ru/catalog/0/search.aspx?sort=popular&search=рюкзак">7. Ссылка с двумя параметрами в URL; </a> </li>
+  <li> 8. Список ссылок основной навигации сайта с подписями title;  </li>
+<h2>Компания Мини_КубГУ</h2>
+
+  <nav>
+<ul>
+  <li><a href="#about" title="Направление деятельности">О компании</a></li>
+  <li><a href="#services" title="Предлагаемые услуги">Услуги</a></li>
+  <li><a href="#contacts" title="Как с нами связаться">Контакты</a></li>
+</ul>
+  </nav>
+  <p></p>
+  <li> 9. Ссылка без href;       
+        https://moodle.kubsu.ru/pluginfile.php/73363/mod_resource/content/1/%D0%92%D0%B5%D0%B1-%D1%80%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B0%20%28%D1%87%D0%B5%D1%80%D0%BD%D0%BE%D0%B2%D0%B8%D0%BA%29.pdf 
+        <p></p>
+  </li>
+  <li> <a href="#">10. Ссылка с пустым href; </a> </li>
+  <li> <a href="http://example.com" rel="nofollow">11. Ссылка, по которой запрещен переход поисковикам; </a> </li>
+  <li> <!--noindex--><a href="https:example.com">12. Ссылка, запрещенная для индексации поисковиками; </a> <!--/noindex--></li>
+  <li> <p>13. Улыбаемся  <a href = "#picture"> и машем </a> (контекстную в тексте абзаца); </p></li>
+  <li> 14. Cсылка-изображение; <a href="Tartaglia.jpg"><img src="Tartaglia.jpg" width="850" height="500" id="picture"> </a> </li>
+
+  <li>
+    15. ссылки из прямоугольных и круглых областей картинки (HTML-тег map);
+    <map name ="yandex">
+            <area shape="rect"coords="311,110,744,285"href="https://www.pitomnik-klever.com/prodaga-krolchat"alt="Прямоугольник">
+            <area shape="circle"coords="168,184,115"href="https://www.jetbrains.com/ru-ru/pycharm/" alt="Круг">
+            </map>
+            <a id="map"><img src="figures.png"usemap="#yandex"alt="map"></a>
+        
+  </li>
+  
+    <a id = "about"> <h2>О компании</h2> </a>
+      Учим лекции и решаем задачки 
+    <a id = "services"> <h2>Предлагаемые услуги</h2> </a>
+      Решим за Вас зачетные задачи 
+    <a id = "contacts"> <h2>Контакты</h2> </a>
+      Ищите в коридорах университета </a>
+  <p>
+  </p>
+  <li><a href="form.html">16. Относительная ссылка на страницу в текущем каталоге</a></li>
+  <li><a href="about/inaboutpage.html">17. Относительная ссылка на страницу в каталоге about</a></li>
+  <li><a href="../higher.html">18. Относительная ссылка на страницу в каталоге уровнем выше текущего</a></li>
+  <li><a href="../../the_highest.html">19. Относительная ссылка на страницу в каталоге двумя уровнями вышe</a></li>
+  <li><a href="index.html">20. Сокращенная ссылка на главную</a></li>
+  <li><a href="deeper/deeper.html">21. Сокращенная ссылка на внутреннюю.</a></li>
+
+<h2>Моя форма:</h2>
+<form action="/" method="POST">
+<a id="form"> </a>
+1) <label>
+    Имя:<br />
+    <input name="field-name-1"
+    value="Анна" />
+  </label><br />
+2) <label>
+    email:<br />
+    <input name="field-email"
+    value="my@example.com"
+    type="email" />
+</label><br />
+3) <label>
+    Дата рождения:<br />
+    <input name="field-date"
+    value="2004-01-03"
+    type="date" />
+</label><br />
+4) Выберите пол: <br />
+    <label><input type="radio" name="group-1" value="gen1" checked="checked"/> женский </label>
+    <label><input type="radio" name="group-1" value="gen2"/> мужской </label> <br />
+5) Выберите количество конечностей: <br />
+    <label><input type="radio" name="group-2"  value="count1"/> 1</label>
+    <label><input type="radio" name="group-2" value="count2"/> 2</label>
+    <label><input type="radio" name="group-2" value="count3"/> 3</label>
+    <label><input type="radio" name="group-2" value="count4" checked="checked"/> 4</label>
+    <label><input type="radio" name="group-2" value="count5"/> 5</label>
+    <label><input name="group-2" type="radio" value="count6"/> 6 и больше
+    </label> <br />
+6) <label>
+Выберите сверхспособности: <br />
+    <select name="field-sup" multiple="multiple">
+    <option value="num1" selected="selected">левитация</option>
+    <option value="num2"> бессмертие </option>
+    <option value="num3"> прохождение сквозь стены </option>
+    </select>
+    </label> <br />
+7) 
+<label>
+    Биография:<br />
+    <textarea name="field-name-2">Родилась в Уганде.</textarea>
+</label><br />
+8)
+<label>
+    Чекбокс: <br />
+    <input type="checkbox" name="check"> C контрактом ознакомлен(а)
+</label> <br />
+9)
+  <input type="submit" value="Отправить"/>
+  </form>
+  <a id="end"></a>
+
+</ul>
+</body>
+</html>
