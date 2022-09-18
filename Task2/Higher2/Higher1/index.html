@@ -6,6 +6,20 @@
     <link rel="stylesheet" href="style.css">
   </head>
 <body>
+<div class="wrapper">
+      <header>
+        <img class = "my_img2" src="logo.jpg" alt="Логотип бегемота" />
+        <div class="smt">
+              <h1>Продажа бегемотов</h1>
+        </div>
+      </header>
+</div>
+<nav class="menu">
+  <a href="#about" title="Направление деятельности">О компании</a>
+  <a href="#services" title="Предлагаемые услуги">Услуги</a>
+  <a href="#contacts" title="Как с нами связаться">Контакты</a>
+</nav>
+
 <ul>
   <li> <a href="http://example.com">1. Абсолютная гиперссылка на главную страницу сайта example.com; </a> </li>
   <li> <a href="https://example.com">2. Абсолютная гиперссылка на главную страницу сайта example.com в протоколе https; </a> </li>
@@ -15,27 +29,13 @@
   <li> <a href="#picture">6. Перейти на фрагмент текущей страницы; </a> </li>
   <li> <a href="https://www.wildberries.ru/catalog/0/search.aspx?sort=popular&search=рюкзак">7. Ссылка с двумя параметрами в URL; </a> </li>
   <li> 8. Список ссылок основной навигации сайта с подписями title;  </li>
-</ul>
-<h2>Компания Мини_КубГУ</h2>
-
-  <nav>
-<ul>
-  <li><a href="#about" title="Направление деятельности">О компании</a></li>
-  <li><a href="#services" title="Предлагаемые услуги">Услуги</a></li>
-  <li><a href="#contacts" title="Как с нами связаться">Контакты</a></li>
-</ul>
-  </nav>
-  <p></p>
-<ul>
   <li> 9. Ссылка без href;       
-        https://moodle.kubsu.ru/pluginfile.php/73363/mod_resource/content/1/%D0%92%D0%B5%D0%B1-%D1%80%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B0%20%28%D1%87%D0%B5%D1%80%D0%BD%D0%BE%D0%B2%D0%B8%D0%BA%29.pdf 
-        <p></p>
-  </li>
+        https://moodle.kubsu.ru/pluginfile.php/73363/mod_resource/content/1/%D0%92%D0%B5%D0%B1-%D1%80%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B0%20%28%D1%87%D0%B5%D1%80%D0%BD%D0%BE%D0%B2%D0%B8%D0%BA%29.pdf </li>
   <li> <a href="#">10. Ссылка с пустым href; </a> </li>
   <li> <a href="http://example.com" rel="nofollow">11. Ссылка, по которой запрещен переход поисковикам; </a> </li>
   <li> <!--noindex--><a href="https://example.com">12. Ссылка, запрещенная для индексации поисковиками; </a> <!--/noindex--></li>
-  <li> <p>13. Улыбаемся  <a href = "#picture"> и машем </a> (контекстную в тексте абзаца); </p></li>
-  <li> 14. Cсылка-изображение; <a href="Tartaglia.jpg"><img src ="Tartaglia.jpg" width="850" height="500" id="picture" alt="Картинка"> </a> </li>
+  <li> <p>13. Наш бегемот  <a href = "#picture"> Виталий </a> (контекстную в тексте абзаца); </p></li>
+  <li> 14. Cсылка-изображение; <a href="hippo.jpg"><img src ="hippo.jpg" width="850" height="500" id="picture" alt="Картинка"> </a> </li>
 
   <li>
     15. ссылки из прямоугольных и круглых областей картинки (HTML-тег map);
@@ -46,13 +46,17 @@
             <a id="map"></a><img src="figures.png" usemap="#yandex" alt="map">
         
   </li>
-</ul>  
+</ul>
+<h1> Компания по продаже бегемотов "Большой зеленый друг" </h1>  
     <a id = "about"> <h2>О компании</h2> </a>
-      Учим лекции и решаем задачки 
+      Продаем бегемотов оптом и в розницу с 1998 года. Большой ассортимент бегемотов самых разных цветов и размеров.
     <a id = "services"> <h2>Предлагаемые услуги</h2> </a>
-      Решим за Вас зачетные задачи 
+      <ul>
+          <li>Доставка бегемота курьером </li>
+          <li>За покупку от 5 бегемотов дарим еще одного (акция действует до 02.05.2023) </li>
+      </ul>    
     <a id = "contacts"> <h2>Контакты</h2> </a>
-      Ищите в коридорах университета 
+      Адрес центрального филиала: Африка, Ремпублика Уганда, г. Иганга, Бакаба-роуд 17
   <p>
   </p>
 <ul>
@@ -64,41 +68,42 @@
   <li><a href="deeper/deeper.html">21. Сокращенная ссылка на внутреннюю.</a></li>
 </ul>
 
-<table>
+<table class = "table_st">
+  <caption>Прайс-лист</caption>
   <tr>
-    <th>Столбец 1</th>
-    <th>Столбец 2</th>
-    <th>Столбец 3</th>
+    <th>Вес бегемота </th>
+    <th>Цвет бегемота <br> (на выбор) </th>
+    <th>Цена бегемота <br> (угандийские шиллинги) </th>
   </tr>
 
   <tr>
-    <td colspan="3">Объединение ячеек в 1-ой строке</td>
+    <td colspan="3">К сожалению, желтых пятнистых бегемотов пока нет в наличии</td>
   </tr>
 
   <tr>
-    <td>Ячейка 21</td>
-    <td>Ячейка 22</td>
-    <td>Ячейка 23</td>
+    <td>1500 кг (классика)</td>
+    <td>Темно серый, коричневый</td>
+    <td>2 000 000</td>
   </tr>
 
   <tr>
-    <td>Ячейка 31</td>
-    <td>Ячейка 32</td>
-    <td>Ячейка 33</td>
+    <td>3400 кг (plus-size)</td>
+    <td>Зеленый, есть в крапинку</td>
+    <td>3 000 000</td>
   </tr>
 
   <tr>
-    <td>Ячейка 41</td>
-    <td>Ячейка 42</td>
-    <td>Ячейка 43</td>
+    <td>700 кг (маломерный)</td>
+    <td>Светло серый, розовый</td>
+    <td>1 500 000</td>
   </tr>
 
   <tr>
-    <td colspan="3">Объединение ячеек в 5-ой строке</td>
+    <td colspan="3">К сожалению, блестящих полосатых бегемотов раскупили</td>
   </tr>
 </table>
 
-<h2>Моя форма:</h2>
+<h2>Для покупки бегемота, заполните анкету:</h2>
 <form action="/" method="POST">
 <a id="form"> </a>
 1) <label>
@@ -142,16 +147,26 @@
     Биография:<br />
     <textarea name="field-name-2">Родилась в Уганде.</textarea>
 </label><br />
-8)
+8) 
+<label>
+    Выбранный бегемот:<br />
+    <textarea name="field-name-2">Например, блестящий в полоску 1500 кг</textarea>
+</label><br />
+9)
 <label>
     Чекбокс: <br />
     <input type="checkbox" name="check"> C контрактом ознакомлен(а)
 </label> <br />
-9)
+10)
   <input type="submit" value="Отправить"/>
   </form>
   <a id="end"></a>
 
-
+<footer>
+  <div class = "smt2">
+  <a id="footer"></a>
+  <p>&#169; Ведущий продавец бегемотов 2022 </p>
+</div>
+</footer>
 </body>
 </html>
