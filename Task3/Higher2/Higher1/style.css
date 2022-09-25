@@ -44,7 +44,7 @@ header {
 }
 .content{
     display: flex;
-    flex-flow: row;
+    flex-flow: column;
     max-width: 100%;
     margin: auto;
 
