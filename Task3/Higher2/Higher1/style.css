@@ -108,6 +108,7 @@ footer {
     .menu {
         flex-direction: row;
         max-width: 960px;
+        justify-content: space-evenly;
     }
     img {
         max-width: 900px;
