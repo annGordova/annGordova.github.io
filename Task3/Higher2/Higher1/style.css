@@ -1,5 +1,5 @@
 .table_st {
-    order: 0;
+    order: 1;
     margin: auto;
     text-align: left;
     border: 15px double #4B0082;
@@ -100,7 +100,7 @@ form{
 @media (min-width: 800px) {
     .table_st {
         max-width: 800px;
-        order: 1;
+        order: 0;
     }
     .tabletask th {
         font-size: medium;
