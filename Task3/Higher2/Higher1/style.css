@@ -17,6 +17,8 @@
     margin: auto;
     text-align: center;
     border: 15px double #4B0082;
+    max-width: 100%;
+
 }
     .tabletask th {
         font-weight: 1000;
