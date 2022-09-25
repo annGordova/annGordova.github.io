@@ -35,6 +35,7 @@ img{
 }
 header {
     text-align: center;
+    margin: auto;
     font-size: 23px;
     letter-spacing: 10px;
     background: #00FA9A;
@@ -75,6 +76,7 @@ header {
 footer {
     font-size: 40px;
     background-color: #00FA9A;
+    margin: auto;
 }
 .menu{
     display: flex;
