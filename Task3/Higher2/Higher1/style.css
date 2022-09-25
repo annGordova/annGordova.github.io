@@ -1,19 +1,26 @@
 .table_st {
+    order: 1;
     margin: auto;
     text-align: left;
     border: 15px double #4B0082;
 }
+.table_st table {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    text-align: center;
+}
     .table_st th {
         font-weight: 1000;
-	font-size: 30px;
+    font-size: 30px;
         color: #4B0082;
-	text-align: center;
+    text-align: center;
         padding: 100px 150px;
     }
     .table_st td {        
         font-weight: 300;
-	font-size: 26px;
-	color: #00008B;
+    font-size: 26px;
+    color: #00008B;
         padding: 10px 15px;
     }
     .table_st caption {
@@ -22,7 +29,10 @@
     }
 .table_st tr:nth-child(even) {background:#00FA9A;}
 .table_st tr:nth-child(odd) {background:#E0FFFF;}
-
+img{
+    max-width: 90%;
+    height: auto;
+}
 header {
     text-align: center;
     font-size: 23px;
@@ -31,17 +41,29 @@ header {
     color: #4B0082;
     border-bottom: 5px outset #4B0082;
 }
+.content{
+    display: flex;
+    flex-flow: column;
+    max-width: 100%;
+    margin: auto;
+
+}
 .wrapper {
     text-align: center;
+}
+.list{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    text-align: left;
 }
 .smt {
     margin: auto;
     text-align: center;
-    
+    max-width: 960px;
 }
 .smt2 {
     text-align: left;
-    
     margin: 5px;
 }
 .my_img2{
@@ -55,9 +77,50 @@ footer {
     background-color: #00FA9A;
 }
 .menu{
+    display: flex;
+    flex-direction: column;
+    text-allgn: left;
     font-size: 30px;
-    margin: 3px;
-    max-width: 960px;
+    margin-left: 25%;
+    max-width: 100%;
     background-color: #E0FFFF;
 
+}
+.container{
+    display: flex;
+    flex-direction: column;
+}
+form{
+    display: flex;
+    flex-direction: column;
+}
+@media (min-width: 768px) {
+    .tabletask {
+        max-width: 960px;
+        order: 0;
+    }
+    .tabletask th {
+        font-size: medium;
+    }
+    .tabletask td {
+        font-size: medium;
+    }
+    .menu {
+        flex-direction: row;
+        justify-content: space-evenly;
+        max-width: 960px;
+    }
+    img {
+        max-width: 900px;
+    }
+    
+    .content {
+        max-width: 960px;
+    }
+    .logo {
+        width: 120px;
+        float: left;
+        margin-bottom: 0px;
+        text-align: left;
+    }
 }
