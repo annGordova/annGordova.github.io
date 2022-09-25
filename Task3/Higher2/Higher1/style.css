@@ -15,7 +15,7 @@
     font-size: 30px;
         color: #4B0082;
     text-align: center;
-        padding: 100px 150px;
+        padding: 30px 50px;
     }
     .table_st td {        
         font-weight: 300;
@@ -24,7 +24,7 @@
         padding: 10px 15px;
     }
     .table_st caption {
-        font-size: 50px;
+        font-size: 30px;
         text-decoration-color: #4B0082
     }
 .table_st tr:nth-child(even) {background:#00FA9A;}
@@ -76,7 +76,8 @@ header {
 footer {
     font-size: 40px;
     background-color: #00FA9A;
-    margin: auto;
+
+
 }
 .menu{
     display: flex;
