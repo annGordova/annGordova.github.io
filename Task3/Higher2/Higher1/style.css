@@ -1,5 +1,5 @@
 .table_st {
-
+    order: 1;
     margin: auto;
     text-align: left;
     border: 15px double #4B0082;
@@ -82,7 +82,7 @@ footer {
 .menu{
     display: flex;
     flex-direction: column;
-    text-allgn: left;
+    text-align: left;
     font-size: 30px;
     margin-left: 25%;
     max-width: 100%;
