@@ -7,6 +7,18 @@
     text-align: left;
     margin: auto; 
 }
+.tabletask {
+    overflow: auto;
+    position: relative;
+}
+.tabletask table {
+    display: inline-block;
+    vertical-align: top;
+    max-width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+}
 .tabletask{
     order:  1;
 }
@@ -17,7 +29,6 @@
     margin: auto;
     text-align: center;
     border: 15px double #4B0082;
-    max-width: 100%;
 
 }
     .tabletask th {
@@ -73,7 +84,6 @@ header {
     flex-direction: column;
     text-align: left;
     font-size: 30px;
-    margin-left: 25%;
     max-width: 100%;
     background-color: #E0FFFF;
 }
