@@ -82,7 +82,7 @@ footer {
 .menu{
     display: flex;
     flex-direction: column;
-    text-align: left;
+    text-allgn: left;
     font-size: 30px;
     margin-left: 25%;
     max-width: 100%;
@@ -110,7 +110,7 @@ form{
     }
     .menu {
         flex-direction: row;
-        
+        justify-content: space-evenly;
         max-width: 960px;
     }
     img {
