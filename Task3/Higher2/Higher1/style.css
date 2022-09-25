@@ -96,9 +96,9 @@ form{
     display: flex;
     flex-direction: column;
 }
-@media (min-width: 768px) {
+@media (min-width: 800px) {
     .tabletask {
-        max-width: 960px;
+        max-width: 800px;
         order: 0;
     }
     .tabletask th {
@@ -117,8 +117,7 @@ form{
     }
     
     .content {
-        max-width: 960px;
-        margin: auto;
+        max-width: 800px;
     }
     .logo {
         width: 120px;
