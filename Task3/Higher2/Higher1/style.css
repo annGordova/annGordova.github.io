@@ -98,7 +98,7 @@ form{
     flex-direction: column;
 }
 @media (min-width: 800px) {
-    .tabletask {
+    .table_st {
         max-width: 800px;
         order: 0;
     }
