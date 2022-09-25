@@ -1,5 +1,5 @@
 .table_st {
-    order: 1;
+    order: 0;
     margin: auto;
     text-align: left;
     border: 15px double #4B0082;
@@ -44,7 +44,7 @@ header {
 }
 .content{
     display: flex;
-    flex-flow: column;
+    flex-flow: row;
     max-width: 100%;
     margin: auto;
 
@@ -100,7 +100,7 @@ form{
 @media (min-width: 800px) {
     .table_st {
         max-width: 800px;
-        order: 0;
+        order: 1;
     }
     .tabletask th {
         font-size: medium;
@@ -109,7 +109,7 @@ form{
         font-size: medium;
     }
     .menu {
-        flex-direction: row;
+        flex-direction: column;
         justify-content: space-evenly;
         max-width: 960px;
     }
