@@ -1,34 +1,41 @@
-.table_st {
-    order: 1;
-    margin: auto;
-    text-align: left;
-    border: 15px double #4B0082;
+.wrapper {
+    text-align: center;
 }
-.table_st table {
+.linkedlist{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin: auto; 
+}
+.tabletask{
+    order:  1;
+}
+
+.tabletask table {
     display: flex;
     flex-direction: column;
     margin: auto;
     text-align: center;
+    border: 15px double #4B0082;
 }
-    .table_st th {
+    .tabletask th {
         font-weight: 1000;
-    font-size: 30px;
+        font-size: 30px;
         color: #4B0082;
-    text-align: center;
         padding: 30px 50px;
     }
-    .table_st td {        
+    .tabletask td {        
         font-weight: 300;
-    font-size: 26px;
-    color: #00008B;
+        font-size: 26px;
+        color: #00008B;
         padding: 10px 15px;
     }
-    .table_st caption {
+    .tabletask caption {
         font-size: 30px;
         text-decoration-color: #4B0082
     }
-.table_st tr:nth-child(even) {background:#00FA9A;}
-.table_st tr:nth-child(odd) {background:#E0FFFF;}
+.tabletask tr:nth-child(even) {background:#00FA9A;}
+.tabletask tr:nth-child(odd) {background:#E0FFFF;}
 img{
     max-width: 90%;
     height: auto;
@@ -42,42 +49,23 @@ header {
     color: #4B0082;
     border-bottom: 5px outset #4B0082;
 }
-.content{
-    display: flex;
-    flex-flow: column;
-    max-width: 100%;
-    margin: auto;
 
-}
-.wrapper {
-    text-align: center;
-}
-.list{
-    display: flex;
-    flex-direction: column;
-    margin: auto;
+.logo{
+    float:left;
+    width: 125px;
+    height: 75px;
+    padding: 5px;
     text-align: left;
 }
+
 .smt {
     margin: auto;
-    text-align: center;
+    text-align: left;
     max-width: 960px;
 }
 .smt2 {
     text-align: left;
     margin: 5px;
-}
-.my_img2{
-    float:left;
-    width: 125px;
-    height: 75px;
-    padding: 5px;
-}
-footer {
-    font-size: 40px;
-    background-color: #00FA9A;
-
-
 }
 .menu{
     display: flex;
@@ -87,19 +75,29 @@ footer {
     margin-left: 25%;
     max-width: 100%;
     background-color: #E0FFFF;
-
 }
-.container{
+.content{
     display: flex;
-    flex-direction: column;
+    flex-flow: nowrap column;
+    max-width: 100%;
+    margin: auto;
+    text-align: center;
 }
+
+
 form{
     display: flex;
     flex-direction: column;
 }
-@media (min-width: 800px) {
-    .table_st {
-        max-width: 800px;
+footer {
+    font-size: 40px;
+    background-color: #00FA9A;
+}
+
+
+@media (min-width: 768px) {
+    .tabletask {
+        max-width: 960px;
         order: 0;
     }
     .tabletask th {
@@ -110,7 +108,6 @@ form{
     }
     .menu {
         flex-direction: row;
-        justify-content: space-evenly;
         max-width: 960px;
     }
     img {
@@ -118,7 +115,7 @@ form{
     }
     
     .content {
-        max-width: 800px;
+        max-width: 960px;
     }
     .logo {
         width: 120px;
