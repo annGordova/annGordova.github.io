@@ -110,7 +110,7 @@ form{
     }
     .menu {
         flex-direction: row;
-        justify-content: space-evenly;
+        
         max-width: 960px;
     }
     img {
