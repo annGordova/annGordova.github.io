@@ -7,18 +7,7 @@
     text-align: left;
     margin: auto; 
 }
-.tabletask {
-    overflow: auto;
-    position: relative;
-}
-.tabletask table {
-    display: inline-block;
-    vertical-align: top;
-    max-width: 100%;
-    overflow-x: auto;
-    white-space: nowrap;
-    -webkit-overflow-scrolling: touch;
-}
+
 .tabletask{
     order:  1;
 }
@@ -33,9 +22,9 @@
 }
     .tabletask th {
         font-weight: 1000;
-        font-size: 30px;
+        font-size: 7px;
         color: #4B0082;
-        padding: 30px 50px;
+        padding: 3px 5px;
     }
     .tabletask td {        
         font-weight: 300;
@@ -44,7 +33,7 @@
         padding: 10px 15px;
     }
     .tabletask caption {
-        font-size: 30px;
+        font-size: 20px;
         text-decoration-color: #4B0082
     }
 .tabletask tr:nth-child(even) {background:#00FA9A;}
