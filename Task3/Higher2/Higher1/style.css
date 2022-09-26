@@ -21,14 +21,14 @@
 
 }
     .tabletask th {
-        font-weight: 400;
+        font-weight: 1000;
         font-size: 7px;
         color: #4B0082;
         padding: 3px 3px;
     }
     .tabletask td {        
-        font-weight: 300;
-        font-size: 26px;
+        font-weight: 400;
+        font-size: 7px;
         color: #00008B;
         padding: 3px 3px;
     }
