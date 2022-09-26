@@ -17,20 +17,20 @@
     flex-direction: column;
     margin: auto;
     text-align: center;
-    border: 15px double #4B0082;
+    border: 7px double #4B0082;
 
 }
     .tabletask th {
-        font-weight: 1000;
+        font-weight: 400;
         font-size: 7px;
         color: #4B0082;
-        padding: 3px 5px;
+        padding: 3px 3px;
     }
     .tabletask td {        
         font-weight: 300;
         font-size: 26px;
         color: #00008B;
-        padding: 10px 15px;
+        padding: 3px 3px;
     }
     .tabletask caption {
         font-size: 20px;
