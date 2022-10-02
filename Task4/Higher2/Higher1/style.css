@@ -1,0 +1,30 @@
+.logo{
+    width: 100px;
+    height: 58px;
+}
+
+footer {
+    background-color: #00FA9A;
+    font-size: 30px;
+}
+
+th, td {
+    font-size: 9px;
+}
+header {
+    text-align: center;
+    font-size: 23px;
+    letter-spacing: 10px;
+    background: #00FA9A;
+    color: #4B0082;
+    border-bottom: 5px outset #4B0082;
+}
+
+@media (min-width: 768px) {
+
+    th, td {
+        font-size: 15px;
+    }
+
+    
+}
