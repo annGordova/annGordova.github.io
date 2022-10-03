@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="ru">
   <head>
@@ -117,13 +116,13 @@
 1) <label>
     Имя:<br />
     <input name="field-name-1"
-    value="Анна" />
+    value="Анна" required/>
   </label><br />
 2) <label>
     email:<br />
     <input name="field-email"
     value="my@example.com"
-    type="email" />
+    type="email" required pattern="*@*"/>
 </label><br />
 3) <label>
     Дата рождения:<br />
@@ -163,7 +162,7 @@
 9)
 <label>
     Чекбокс: <br />
-    <input type="checkbox" name="check"> C контрактом ознакомлен(а)
+    <input type="checkbox" name="check"  required> C контрактом ознакомлен(а)
 </label> <br />
 10)
   <input type="submit" value="Отправить"/>
