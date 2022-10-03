@@ -22,7 +22,9 @@ header {
     color: #4B0082;
     border-bottom: 5px outset #4B0082;
 }
-
+.container a{
+    padding: 5px;
+}
 @media (min-width: 768px) {
 
     th, td {
