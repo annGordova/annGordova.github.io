@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang=ru>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Гордова</title>
+        <link rel="stylesheet" href="style.css">    
+        <script src="code.js"></script>
+    </head>
+    <body>
+        <header class>
+            <img class="logo" src="logo.jpg" alt="Логотип бегемота">
+            <h1>Покупка бегемотов</h1>
+        </header>
+        <div class>
+            <h2>Оформление заказа</h2>
+            <form name="calculator" onsubmit="return false;">
+                    <table class = "tabletask">
+                      <tr>
+                        <th>Тип бегемота по весу </th>
+                        <th>Цена бегемота за штуку <br> (угандийские шиллинги) </th>
+                        <th>Количество</th>
+                      </tr>
+
+                      <tr>
+                        <td>1500 кг (классика)</td>
+                        <td><input name="price" type="text" value="2000000"></td>
+                        <td><input name="count" type="text" value="0"></td>
+                      </tr>
+
+                      <tr>
+                        <td>3400 кг (plus-size)</td>
+                        <td><input name="price0" type="text" value="3000000"></td>
+                        <td><input name="count0" type="text" value="0"></td>
+                      </tr>
+
+                      <tr>
+                        <td>700 кг (маломерный)</td>
+                        <td><input name="price1" type="text" value="1500000"></td>
+                        <td><input name="count1" type="text" value="0"></td>
+                      </tr>
+                    </table>
+
+                <button onclick="calc();">Рассчитать</button>
+                
+            </form>
+            <div class="pt-2" id="result"></div>
+        </div>
+    </body>
+</html>
