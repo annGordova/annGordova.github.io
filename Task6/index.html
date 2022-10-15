@@ -2,6 +2,7 @@
 <html lang=ru>
     <head>
         <meta charset="UTF-8">
+         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <title>Гордова</title>
         <link rel="stylesheet" href="style.css">    
@@ -12,29 +13,24 @@
             <img class="logo" src="logo.jpg" alt="Логотип бегемота">
             <h1>Покупка бегемотов</h1>
         </header>
-        <header>
-            <img class="logo" src="anteiku.jpg" alt="Логотип Антейку">
-            <h1 сlass="text-right">Кофейня Антейку</h1>
-        </header>
+        
         <div class="container-fluid">
-            <h2>Ваш заказ :</h2>
+            <h2>Оформление заказа:</h2>
             <form name="calculator">
                 <div class="row">
                     <div class="col-5 col-lg-3">
-                        Выберите тип товара :
+                        Выберите тип бегемота по весу:
                     </div>
                     <div class="col-5 col-lg-3">
-                        Выберите количество товара :
+                        Выберите количество бегемотов:
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-5 col-lg-3">
                         <select name="type">
-                            <option value="1">Американо 0.5 литра</option>
-                            <option value="2">Капучино</option>
-                            <option value="3">Латте 0.5 литра</option>
-                            <option value="4">Эспрессо</option>
-                            <option value="5">Мокачино 0.3 литра</option>
+                            <option value="1">1500 кг (Классика)</option>
+                            <option value="2">3400 кг (Plus-size)</option>
+                            <option value="3">700 кг (Маломерный)</option>
                         </select>
                     </div>
                     <div class="col-7 col-lg-4">
@@ -45,23 +41,23 @@
                     <div class="row">
                         <div id="radios">
                             <div class="col-12 pl-4">
-                                <label><input type="radio" name="options" value="1">0.3 литра</label>
+                                <label><input type="radio" name="options" value="1">&nbsp Желтый</label>
                             </div>
                             <div class="col-12 pl-4">
-                                <label><input type="radio" name="options" value="2">0.5 литра</label>
+                                <label><input type="radio" name="options" value="2">&nbsp Розовый</label>
                             </div>
                         </div>
                     </div>
                     <div class="row">
                         <div id="checkboxes">
                             <div class="col-12 pl-4">
-                                <label><input type="checkbox" name="1">Добавить ещё ложку сахара</label>
+                                <label><input type="checkbox" name="1">&nbsp С кисточкой на хвосте</label>
                             </div>
                             <div class="col-12 pl-4">
-                                <label><input type="checkbox" name="2">Добавить карамельный сироп</label>
+                                <label><input type="checkbox" name="2">&nbsp С хохолком</label>
                             </div>
                             <div class="col-12 pl-4">
-                                <label><input type="checkbox" name="3">Заменить молоко на миндальное</label>
+                                <label><input type="checkbox" name="3">&nbsp Пушистый</label>
                             </div>
                         </div>
                     </div>

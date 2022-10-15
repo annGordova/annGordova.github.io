@@ -3,9 +3,10 @@ function updatePrice() {
     let select = s[0];
     let price = 0;
     let prices = {
-        types: [120, 150, 330, 180, 160],
+        types: [2000000, 3000000, 1500000],
         options: {
-            2: 100,
+            1: 15000,
+            2: 20000,
         },
         checkboxes: {
             1: 10,
@@ -15,7 +16,7 @@ function updatePrice() {
     };
     price = prices.types[select.value - 1];
     let radioDiv = document.getElementById("radios");
-    radioDiv.style.display = (select.value == "2" || select.value == "4" ? "block" : "none");
+    radioDiv.style.display = (select.value == "2" ? "block" : "none");
     let radios = document.getElementsByName("options");
     radios.forEach(function(radio) {
         if (radio.checked) {
@@ -26,7 +27,7 @@ function updatePrice() {
         }
     });
     let checkDiv = document.getElementById("checkboxes");
-    checkDiv.style.display = (select.value == "1" || select.value == "2" || select.value == "4" ? "none" : "block");
+    checkDiv.style.display = (select.value == "1" || select.value == "2" ? "none" : "block");
     let checkboxes = document.querySelectorAll("#checkboxes input");
     checkboxes.forEach(function(checkbox) {
         if (checkbox.checked) {
@@ -41,7 +42,7 @@ function updatePrice() {
     }
     else {
         price *= parseInt(count);
-        if(select.value != "2" && select.value != "4") {
+        if(select.value != "2") {
             if(price-prices.types[select.value - 1] * count>=100 && select.value != "1" && price-prices.types[select.value - 1] * count!=130 && price-prices.types[select.value - 1] * count!=140) {
                 price -= 100 * count;
             }
@@ -71,7 +72,7 @@ function updatePrice() {
             price -= 140 * count;
         }
         let Price = document.getElementById("price");
-        Price.innerHTML = price + " рублей";
+        Price.innerHTML = "Великий покупатель бегемотов, Ваш заказ стоит " + price + " угандийских шиллингов";
     }
 }
 window.addEventListener('DOMContentLoaded', function (event) {
