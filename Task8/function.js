@@ -9,7 +9,7 @@ $(function(){
             data: $(this).serialize(),
             success: function(response){
                 if(response.status == "success"){
-                    alert("Заказ подтвержден, бегемот придет по почте через 3 дня");
+                    alert("Заказ подтвержден, бегемот придет по почте через 3 дня. Спасибо за покупку!");
                 }
                 else{
                     alert("Ошибка: " + response.message);
