@@ -1,0 +1,43 @@
+
+header {
+    text-align: center;
+    font-size: 23px;
+    letter-spacing: 10px;
+
+    border-bottom-style: dotted;
+
+}
+
+label{
+    font-size: 20px;
+}
+li{
+    margin: 1%;
+}
+content{
+    margin-top: 2%;
+    display: flex;
+    flex-flow: nowrap column;
+
+    margin-left: 10%;
+    margin-right: 10%;
+    background-color: ;
+
+}
+textarea{
+    width:50%; 
+    height:200%;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+}
+footer {
+    margin-top: 2%;
+    border-top-style: dotted;
+
+}
+
+
+}
