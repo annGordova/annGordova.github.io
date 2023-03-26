@@ -21,7 +21,7 @@ if (empty($_POST['name'])) {
   $errors = TRUE;
 }
 
-if (empty($_POST['year'])) {
+if (empty($_POST['year']) || !is_numeric($_POST['year'])) {
   print('Заполните год.<br/>');
   $errors = TRUE;
 }

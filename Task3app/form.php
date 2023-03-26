@@ -30,7 +30,7 @@
       <li>
        <label>
             Год рождения:<br />
-            <input name="year" value="2004-01-03" type="date" />
+            <input name="year" value="2004"  />
         </label><br />
       </li>
       <li>
