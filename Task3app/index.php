@@ -38,7 +38,7 @@ if (empty($_POST['check'])) {
   $errors = TRUE;
 }
 
-print($_POST['fio'], $_POST['name'], $_POST['year'], $_POST['gender'], $_POST['kon'], $_POST['bio'], $_POST['check'])
+print($_POST['fio'], $_POST['name'], $_POST['year'], $_POST['gender'], $_POST['kon'], $_POST['bio'], $_POST['check']);
 // *************
 // Тут необходимо проверить правильность заполнения всех остальных полей.
 // *************
