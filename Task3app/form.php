@@ -13,7 +13,7 @@
 </header>
 <content>
   <h2>Чтобы записаться на процедуру, заполните анкету:</h2>
-  <form method="POST">
+  <form action = "index.php" method="POST">
     <ol>
       <li>
           <label>
