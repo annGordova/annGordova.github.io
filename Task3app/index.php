@@ -16,13 +16,25 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
 
 
 $errors = FALSE;
-if (empty($_POST['fio'])) {
+if (empty($_POST['name'])) {
   print('Заполните имя.<br/>');
   $errors = TRUE;
 }
 
 if (empty($_POST['year']) || !is_numeric($_POST['year']) || !preg_match('/^\d+$/', $_POST['year'])) {
   print('Заполните год.<br/>');
+  $errors = TRUE;
+}
+if (empty($_POST['emaik=l'])) {
+  print('Заполните email.<br/>');
+  $errors = TRUE;
+}
+if (empty($_POST['bio'])) {
+  print('Заполните биографию.<br/>');
+  $errors = TRUE;
+}
+if (empty($_POST['checkbox'])) {
+  print('Согласитесь сконтрактом.<br/>');
   $errors = TRUE;
 }
 
@@ -45,7 +57,7 @@ $db = new PDO('mysql:host=localhost;dbname=u52834', $user, $pass,
 
 // Подготовленный запрос. Не именованные метки.
 try {
-  $stmt = $db->prepare("INSERT INTO application SET name = ?");
+  $stmt = $db->prepare("INSERT INTO zayava SET name = ?, ....");
   $stmt->execute([$_POST['fio']]);
 }
 catch(PDOException $e){

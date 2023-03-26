@@ -18,42 +18,43 @@
       <li>
           <label>
             Имя:<br />
-            <input name="field-name-1" value="Анна" />
+            <input name="name" value="Анна" />
           </label><br />
       </li>
       <li>
         <label>
             e-mail:<br />
-            <input name="field-email" value="my@example.com" type="email" />
+            <input name="email" value="my@example.com" type="email" />
         </label><br />
       </li>
       <li>
        <label>
             Год рождения:<br />
-            <input name="field-date" value="2004-01-03" type="date" />
+            <input name="year" value="2004-01-03" type="date" />
         </label><br />
       </li>
       <li>
         <label>
             Пол: <br />
-            <label><input type="radio" name="group-1" value="gen1" checked="checked"/> женский </label>
-            <label><input type="radio" name="group-1" value="gen2"/> мужской </label> <br />
+            <label><input type="radio" name="gender" value="2" checked="checked"/> женский </label>
+            <label><input type="radio" name="gender" value="1"/> мужской </label> <br />
         </label>
       </li>
       <li>
           <label>
             Выберите количество конечностей: <br />
-            <label><input type="radio" name="group-2" value="count1"/> 1</label>
-            <label><input type="radio" name="group-2" value="count2"/> 2</label>
-            <label><input type="radio" name="group-2" value="count3"/> 3</label>
-            <label><input type="radio" name="group-2" value="count4" checked="checked"/> 4</label>
-            <label><input type="radio" name="group-2" value="count5"/> 5</label>
-            <label><input name="group-2" type="radio" value="count6"/> 6 и больше
+            <label><input type="radio" name="kon" value="1"/> 1</label>
+            <label><input type="radio" name="kon" value="2"/> 2</label>
+            <label><input type="radio" name="kon" value="3"/> 3</label>
+            <label><input type="radio" name="kon" value="4" checked="checked"/> 4</label>
+            <label><input type="radio" name="kon" value="5"/> 5</label>
+            <label><input name="kon" type="radio" value="6"/> 6 и больше
           </label>
       </li>
       <li>
           <label>
             Выберите желаемые сверхспособности: <br />
+
             <select name="field-sup" multiple="multiple">
               <option value="num1" selected="selected"> бессмертие </option>
               <option value="num2"> прохождение сквозь стены  </option>
@@ -64,7 +65,7 @@
       <li>
         <label>
             Биография и пожаления:<br />
-            <textarea name="field-name-2">Родился с третьим глазом на лбу. Хочу передвинуть на затылок, чтобы было лучше видно</textarea>
+            <textarea name="bio">Родился с третьим глазом на лбу. Хочу передвинуть на затылок, чтобы было лучше видно</textarea>
         </label><br />
       </li>
       <li>
