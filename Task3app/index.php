@@ -33,8 +33,8 @@ if (empty($_POST['bio'])) {
   print('Заполните биографию.<br/>');
   $errors = TRUE;
 }
-if (empty($_POST['checkbox'])) {
-  print('Согласитесь сконтрактом.<br/>');
+if (empty($_POST['check'])) {
+  print('Согласитесь с контрактом.<br/>');
   $errors = TRUE;
 }
 
