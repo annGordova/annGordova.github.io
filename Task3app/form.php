@@ -56,9 +56,9 @@
             Выберите желаемые сверхспособности: <br />
 
             <select name="abilities[]" multiple="multiple">
-              <option value="num1" selected="selected"> бессмертие </option>
-              <option value="num2"> прохождение сквозь стены  </option>
-              <option value="num3"> левитация </option>
+              <option value="'''num1'''" selected="selected"> бессмертие </option>
+              <option value="'''num2'''"> прохождение сквозь стены  </option>
+              <option value="'''num3'''"> левитация </option>
             </select>
           </label>
       </li>
