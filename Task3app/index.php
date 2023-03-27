@@ -68,8 +68,7 @@ try {
   }
   foreach ($_POST['abilities'] as $ability) {
     print($ability);
-    $stmt = $db->prepare("INSERT INTO sposob SET tip = ?");
-    print($stmt);
+    $stmt = $db->prepare("INSERT INTO sposob SET tip = ''' ? ''' ");
     $stmt->execute([$_POST['$ability']]);}
 }
 catch(PDOException $e){
