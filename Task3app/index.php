@@ -78,7 +78,7 @@ try {
 
     $max_id_s = ($db->lastInsertId());
 
-    $stmt = $db->prepare("INSERT INTO svyaz (id_z, id_s) VALUES (:myidz, :myids)")
+    $stmt = $db->prepare("INSERT INTO svyaz (id_z, id_s) VALUES (:myidz, :myids)");
     $stmt->bindParam(':myids', $max_id_s);
     $stmt->bindParam(':myidz', $max_id_z);
     $stmt->execute();
