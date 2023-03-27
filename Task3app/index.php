@@ -67,6 +67,7 @@ try {
   //  print($ability);
   //}
   //$human = "SELECT MAX(id_z) maxidz FROM zayava"; 
+  $max_id_z = ($db->lastInsertId());
   foreach ($_POST['abilities'] as $ability) {
     //print($ability);
     //$stmt = $db->prepare("INSERT INTO sposob SET tip = ? ");
@@ -74,8 +75,13 @@ try {
     $stmt = $db->prepare("INSERT INTO sposob SET tip = :mytip");
     $stmt->bindParam(':mytip', $ability);
     $stmt->execute();
-    print($db->lastInsertId());
 
+    $max_id_s = ($db->lastInsertId());
+
+    $stmt = $db->prepare("INSERT INTO svyaz SET id_s = :myids, id_z = :myidz")
+    $stmt->bindParam(':myids', $max_id_s);
+    $stmt->bindParam(':myidz', $max_id_z);
+    $stmt->execute();
   }
   
 }
