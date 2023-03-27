@@ -62,18 +62,23 @@ $db = new PDO('mysql:host=localhost;dbname=u52834', $user, $pass,
 try {
   $stmt = $db->prepare("INSERT INTO zayava SET namee = ?, email = ?, godrod = ?, pol = ?, konech = ?, biogr = ?");
   $stmt->execute([$_POST['name'], $_POST['email'], $_POST['year'], $_POST['gender'], $_POST['kon'], $_POST['bio']]);
-  foreach ($_POST['abilities'] as $ability)
-  {
-    print($ability);
-  }
+  //foreach ($_POST['abilities'] as $ability)
+  //{
+  //  print($ability);
+  //}
+  //$human = "SELECT MAX(id_z) maxidz FROM zayava"; 
   foreach ($_POST['abilities'] as $ability) {
-    print($ability);
+    //print($ability);
     //$stmt = $db->prepare("INSERT INTO sposob SET tip = ? ");
     //$stmt->execute([$_POST['$ability']]);
     $stmt = $db->prepare("INSERT INTO sposob SET tip = :mytip");
     $stmt->bindParam(':mytip', $ability);
     $stmt->execute();
+    print($db->lastInsertId());
+
+    $num_abil 
   }
+  
 }
 catch(PDOException $e){
   print('Error : ' . $e->getMessage());
