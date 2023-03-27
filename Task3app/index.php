@@ -68,8 +68,12 @@ try {
   }
   foreach ($_POST['abilities'] as $ability) {
     print($ability);
-    $stmt = $db->prepare("INSERT INTO sposob SET tip = ? ");
-    $stmt->execute([$_POST['$ability']]);}
+    //$stmt = $db->prepare("INSERT INTO sposob SET tip = ? ");
+    //$stmt->execute([$_POST['$ability']]);
+    $stmt = $db->prepare("INSERT INTO sposob SET tip = :mytip");
+    $stmt->bindParam(':mytip', $ability);
+    $stmt->execute();
+  }
 }
 catch(PDOException $e){
   print('Error : ' . $e->getMessage());
