@@ -37,7 +37,7 @@ if (empty($_POST['check'])) {
   print('Согласитесь с контрактом.<br/>');
   $errors = TRUE;
 }
-if (empty($_POST['abilities[]'])) {
+if (empty($_POST['abilities'])) {
   print('Выберите способности.<br/>');
   $errors = TRUE;
 }
