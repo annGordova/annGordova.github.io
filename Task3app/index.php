@@ -60,9 +60,9 @@ try {
   $stmt = $db->prepare("INSERT INTO zayava SET name = ?, email = ?, godrod = ?, pol = ?, konech = ?, biogr = ?, ok = ?");
   $stmt->execute([$_POST['name'], $_POST['email'], $_POST['year'], $_POST['gender'], $_POST['kon'], $_POST['bio']]);
   
-  foreach ($_POST['abilities'] as $ability) {
-    $stmt = $db->prepare("INSERT INTO sposob SET tip = ?");
-    $stmt->execute([$_POST['$ability']]);}
+  //foreach ($_POST['abilities'] as $ability) {
+    //$stmt = $db->prepare("INSERT INTO sposob SET tip = ?");
+    //$stmt->execute([$_POST['$ability']]);}
 }
 catch(PDOException $e){
   print('Error : ' . $e->getMessage());
