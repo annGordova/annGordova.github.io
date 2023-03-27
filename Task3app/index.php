@@ -76,7 +76,6 @@ try {
     $stmt->execute();
     print($db->lastInsertId());
 
-    $num_abil 
   }
   
 }
