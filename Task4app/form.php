@@ -80,7 +80,7 @@
         <label>
             Биография :<br />
             
-            <textarea name="bio" <?php print($errors['bio'] ? 'class="error"' : '');?> value = "<?php print $values['bio']; if empty($values['bio']) print('sfsdfs')?>"></textarea>
+            <textarea name="bio" <?php print($errors['bio'] ? 'class="error"' : '');?> value = "<?php print $values['bio']; if (empty($values['bio'])) print('sfsdfs')?>"></textarea>
         </label><br />
       </li>
       <li>
