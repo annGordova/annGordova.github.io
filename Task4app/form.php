@@ -86,7 +86,7 @@
       <li>
         <label>
             Чекбокс: <br />
-            <input type="checkbox" name="check" <?php if ($errors['check']) {print 'class="error"';} ?> value="<?php print $values['check']; ?>"> C контрактом ознакомлен(а)
+            <label><input type="checkbox" checked="checked" name="check" /> С контрактом ознакомлен</label>
         </label> <br />
       </li>
     </ol>
