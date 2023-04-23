@@ -159,7 +159,7 @@ else{
   if (!empty($_POST['ability'])) {
     setcookie('ability_value', json_decode($_POST['ability']), time() + 24 * 60 * 60);
   }
-  
+
   if (empty($_POST['check'])) {
     
     setcookie('check_error', '1', time() + 24 * 60 * 60);
@@ -183,7 +183,7 @@ else{
     setcookie('year_error', '', 100000);
     setcookie('gender_error', '', 100000);
     setcookie('kon_error', '', 100000);
-    setcookie('abilities_error', '', 100000);
+    setcookie('ability_error', '', 100000);
     setcookie('bio_error', '', 100000);
     setcookie('check_error', '', 100000);
     
@@ -209,7 +209,7 @@ else{
     //}
     //$human = "SELECT MAX(id_z) maxidz FROM zayava"; 
     $max_id_z = ($db->lastInsertId());
-    foreach ($_POST['abilities'] as $ability) {
+    foreach ($_POST['ability'] as $ability) {
       //print($ability);
       //$stmt = $db->prepare("INSERT INTO sposob SET tip = ? ");
       //$stmt->execute([$_POST['$ability']]);
