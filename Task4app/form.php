@@ -71,16 +71,16 @@
             Выберите желаемые сверхспособности: <br />
 
             <select name="abilities[]" <?php if ($errors['abilities']) {print 'class="error"';} ?> multiple="multiple">
-              <option value="<?php print $values['abilities']; ?>" selected="selected"> бессмертие </option>
-              <option value="<?php print $values['abilities']; ?>"> прохождение сквозь стены  </option>
-              <option value="<?php print $values['abilities']; ?>"> левитация </option>
+              <option value="bessmert" selected="selected"> бессмертие </option>
+              <option value="stenochod"> прохождение сквозь стены  </option>
+              <option value="levitat"> левитация </option>
             </select>
           </label>
       </li>
       <li>
         <label>
             Биография и пожаления:<br />
-            <textarea name="bio" <?php if ($errors['bio']) {print 'class="error"';} ?> value="<?php print $values['bio']; ?>">Родился с третьим глазом на лбу. Хочу передвинуть на затылок, чтобы было лучше видно</textarea>
+            <textarea name="bio" <?php if ($errors['bio']) {print 'class="error"';} ?> value="<?php print $values['bio']; ?>" >Родился с третьим глазом на лбу. Хочу передвинуть на затылок, чтобы было лучше видно</textarea>
         </label><br />
       </li>
       <li>
