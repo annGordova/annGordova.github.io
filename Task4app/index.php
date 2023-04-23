@@ -150,7 +150,7 @@ else{
   }
 
   foreach ($_POST['ability'] as $ability) {
-    if (!is_numeric($ability) || !in_array($ability, [1, 2, 3, 4])) {
+    if (0) {
       setcookie('ability_error', '1', time() + 24 * 60 * 60);
       $errors = TRUE;
       break;
