@@ -22,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
   $errors['gender'] = !empty($_COOKIE['gender_error']);
   $errors['kon'] = !empty($_COOKIE['kon_error']);
   $errors['bio'] = !empty($_COOKIE['bio_error']);
-  $errors['abilities'] = !empty($_COOKIE['abilities_error']);
+  $errors['ability'] = !empty($_COOKIE['ability_error']);
   $errors['check'] = !empty($_COOKIE['check_error']);
 
   if ($errors['name']) {
@@ -60,11 +60,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
 
     $messages[] = '<div class="error">Заполните биографию.</div>';
   }
-  if ($errors['abilities']) {
-
-    setcookie('abilities_error', '', 100000);
-
-    $messages[] = '<div class="error">Заполните способности.</div>';
+  if ($errors['ability']) {
+    
+    setcookie('ability_error', '', 100000);
+    
+    $messages[] = '<div class="error">Заполните суперспособность.</div>';
   }
   if ($errors['check']) {
 
@@ -81,7 +81,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
   $values['gender'] = empty($_COOKIE['gender_value']) ? '' : $_COOKIE['gender_value'];
   $values['kon'] = empty($_COOKIE['kon']) ? '' : $_COOKIE['kon_value'];
   $values['bio'] = empty($_COOKIE['bio_value']) ? '' : $_COOKIE['bio_value'];
-  $values['abilities'] = empty($_COOKIE['abilities_value']) ? '' : $_COOKIE['abilities_value'];
+  $values['ability'] = empty($_COOKIE['ability_value']) ? array() : json_encode($_COOKIE['ability_value']);
   $values['check'] = empty($_COOKIE['check_value']) ? '' : $_COOKIE['check_value'];
 
   include('form.php');
@@ -149,15 +149,17 @@ else{
     setcookie('bio_value', $_POST['bio'], time() + 30 * 24 * 60 * 60);
   }
 
-  if (empty($_POST['abilities'])) {
-    
-    setcookie('abilities_error', '1', time() + 24 * 60 * 60);
-    $errors = TRUE;
+  foreach ($_POST['ability'] as $ability) {
+    if (!is_numeric($ability) || !in_array($ability, [1, 2, 3, 4])) {
+      setcookie('ability_error', '1', time() + 24 * 60 * 60);
+      $errors = TRUE;
+      break;
+    }
   }
-  else {
-
-    setcookie('abilities_value', $_POST['abilities'], time() + 30 * 24 * 60 * 60);
+  if (!empty($_POST['ability'])) {
+    setcookie('ability_value', json_decode($_POST['ability']), time() + 24 * 60 * 60);
   }
+  
   if (empty($_POST['check'])) {
     
     setcookie('check_error', '1', time() + 24 * 60 * 60);

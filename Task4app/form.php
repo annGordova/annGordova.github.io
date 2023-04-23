@@ -58,7 +58,7 @@
       <li>
           <label>
             Выберите количество конечностей: <br />
-            <label><input type="radio" name="kon" value = "1" <?php print($errors['kon'] ? 'class="error"' : '');?> <?php if ($values['kon']=='1') print 'checked';?>/>
+            <label><input type="radio" name="kon" value = "1" <?php print($errors['kon'] ? 'class="error"' : '');?> <?php if ($values['kon']=='1') print 'checked';?>/> 1 </label>
             <label><input type="radio" name="kon" value = "2" <?php print($errors['kon'] ? 'class="error"' : '');?> <?php if ($values['kon']=='2') print 'checked';?>/> 2 </label>
             <label><input type="radio" name="kon" value = "3" <?php print($errors['kon'] ? 'class="error"' : '');?> <?php if ($values['kon']=='3') print 'checked';?>/> 3 </label>
             <label><input type="radio" name="kon" value = "4" <?php print($errors['kon'] ? 'class="error"' : '');?> <?php if ($values['kon']=='4') print 'checked';?>/> 4 </label>
@@ -69,11 +69,10 @@
       <li>
           <label>
             Выберите желаемые сверхспособности: <br />
-
-            <select name="abilities[]" <?php if ($errors['abilities']) {print 'class="error"';} ?> multiple="multiple">
-              <option value="<?php print $values['abilities']; ?>" selected="selected"> бессмертие </option>
-              <option value="<?php print $values['abilities']; ?>"> прохождение сквозь стены  </option>
-              <option value="<?php print $values['abilities']; ?>"> левитация </option>
+            <select name="ability[]" multiple="multiple" <?php print($errors['ability'] ? 'class="error"' : '');?>>
+              <option value="stenchod" <?php print(in_array('stenochod', $values['ability']) ? 'selected ="selected"' : '');?>>Хождение сковзь стены</option>
+              <option value="nevidim" <?php print(in_array('nevidim', $values['ability']) ? 'selected ="selected"' : '');?>>Невидимость</option>
+              <option value="levitat" <?php print(in_array('levitat', $values['ability']) ? 'selected ="selected"' : '');?>>Левитация</option>
             </select>
           </label>
       </li>
