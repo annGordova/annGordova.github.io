@@ -58,12 +58,12 @@
       <li>
           <label>
             Выберите количество конечностей: <br />
-            <label><input type="radio" name="kon" value = "1" <?php print($errors['kon'] ? 'class="error"' : '');?> <?php if ($values['kon']=='1') print 'checked';?>/> 1</label>
-            <label><input type="radio" name="kon" value = "2" <?php print($errors['kon'] ? 'class="error"' : '');?> <?php if ($values['kon']=='2') print 'checked';?>/> 2</label>
-            <label><input type="radio" name="kon" value = "3" <?php print($errors['kon'] ? 'class="error"' : '');?> <?php if ($values['kon']=='3') print 'checked';?>/> 3</label>
-            <label><input type="radio" name="kon" value = "4" <?php print($errors['kon'] ? 'class="error"' : '');?> <?php if ($values['kon']=='4') print 'checked';?>/> 4</label>
-            <label><input type="radio" name="kon" value = "5" <?php print($errors['kon'] ? 'class="error"' : '');?> <?php if ($values['kon']=='5') print 'checked';?>/> 5</label>
-            <label><input type="radio" name="kon" value = "6" <?php print($errors['kon'] ? 'class="error"' : '');?> <?php if ($values['kon']=='6') print 'checked';?>/> 6 и больше
+            <label><input type="radio" name="kon" value = "1" <?php print($errors['kon'] ? 'class="error"' : '');?> <?php if ($values['kon']=='1') print 'checked';?>/> 1 </label>
+            <label><input type="radio" name="kon" value = "2" <?php print($errors['kon'] ? 'class="error"' : '');?> <?php if ($values['kon']=='2') print 'checked';?>/> 2 </label>
+            <label><input type="radio" name="kon" value = "3" <?php print($errors['kon'] ? 'class="error"' : '');?> <?php if ($values['kon']=='3') print 'checked';?>/> 3 </label>
+            <label><input type="radio" name="kon" value = "4" <?php print($errors['kon'] ? 'class="error"' : '');?> <?php if ($values['kon']=='4') print 'checked';?>/> 4 </label>
+            <label><input type="radio" name="kon" value = "5" <?php print($errors['kon'] ? 'class="error"' : '');?> <?php if ($values['kon']=='5') print 'checked';?>/> 5 </label>
+            <label><input type="radio" name="kon" value = "6" <?php print($errors['kon'] ? 'class="error"' : '');?> <?php if ($values['kon']=='6') print 'checked';?>/> 6 и более </label>
           </label>
       </li>
       <li>
