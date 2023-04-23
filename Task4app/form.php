@@ -80,7 +80,8 @@
       <li>
         <label>
             Биография и пожаления:<br />
-            <textarea name="bio" <?php if ($errors['bio']) {print 'class="error"';} ?> value="<?php print $values['bio']; ?>"></textarea>
+            
+            <textarea name="bio" <?php if ($errors['bio']) {print 'class="error"';} ?> value="<?php print $values['bio']; ?>" />
         </label><br />
       </li>
       <li>
