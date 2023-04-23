@@ -156,8 +156,12 @@ else{
       break;
     }
   }
-  if (empty($_POST['ability'])) {
+  if (!empty($_POST['ability'])) {
     setcookie('ability_value', json_decode($_POST['ability']), time() + 24 * 60 * 60);
+  }
+  else{
+    setcookie('ability_error', '1', time() + 24 * 60 * 60);
+    $errors = TRUE;
   }
 
   if (empty($_POST['check'])) {
