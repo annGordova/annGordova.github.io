@@ -69,7 +69,7 @@
       <li>
           <label>
             Выберите желаемые сверхспособности: <br />
-            <select name="ability[]" multiple="multiple" <?php print($errors['ability'] ? 'class="error"' : '');?>>
+            <select name="ability[]" multiple="multiple" <?php print($errors['ability'] ? 'class="error"' : '');?><?php print(in_array('stenochod', $values['ability']) ? 'selected ="selected"' : '');?>>
               <option value="stenchod" <?php print(in_array('stenochod', $values['ability']) ? 'selected ="selected"' : '');?>>Хождение сковзь стены</option>
               <option value="nevidim" <?php print(in_array('nevidim', $values['ability']) ? 'selected ="selected"' : '');?>>Невидимость</option>
               <option value="levitat" <?php print(in_array('levitat', $values['ability']) ? 'selected ="selected"' : '');?>>Левитация</option>
