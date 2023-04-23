@@ -150,7 +150,7 @@ else{
   }
 
   foreach ($_POST['ability'] as $ability) {
-    if (0) {
+    if (!in_array($ability, ['stenchod', 'nevidim', 'levitat'])) {
       setcookie('ability_error', '1', time() + 24 * 60 * 60);
       $errors = TRUE;
       break;
