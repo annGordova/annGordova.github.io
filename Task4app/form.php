@@ -80,7 +80,8 @@
       <li>
         <label>
             Биография и пожаления:<br />
-            <textarea name="bio" <?php if ($errors['bio']) {print 'class="error"';} ?> value="<?php print $values['bio']; ?>" >Родился с третьим глазом на лбу. Хочу передвинуть на затылок, чтобы было лучше видно</textarea>
+            
+            <textarea name="bio" <?php if ($errors['bio']) {print 'class="error"';} ?> value="<?php print $values['bio']; ?>"></textarea>
         </label><br />
       </li>
       <li>
