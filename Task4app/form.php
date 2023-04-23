@@ -53,7 +53,7 @@
             Пол: <br />
             <label><input type="radio" name="gender" value = "2" checked="checked" <?php print($errors['gender'] ? 'class="error"' : '');?>
       <?php if ($values['gender']=='m') print 'checked';?>/> женский </label>
-            <label><input type="radio" name="gender" value = "2" checked="checked" <?php print($errors['gender'] ? 'class="error"' : '');?>
+            <label><input type="radio" name="gender" value = "2" <?php print($errors['gender'] ? 'class="error"' : '');?>
       <?php if ($values['gender']=='m') print 'checked';?>/> мужской </label> <br />
         </label>
       </li>
