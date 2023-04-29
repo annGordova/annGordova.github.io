@@ -228,7 +228,7 @@ else{
     
     $db = foo();
     $lolob = TRUE;
-    $lolo = '123'
+    $lolo = '123';
     while ($lolob)
     {
       try{
