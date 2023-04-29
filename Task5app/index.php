@@ -225,9 +225,10 @@ else{
   }
   else {
     // Генерируем уникальный логин и пароль.
-    // TODO: сделать механизм генерации, например функциями rand(), uniquid(), md5(), substr().
     
+    $db = foo();
     $lolob = TRUE;
+    $lolo = '123'
     while ($lolob)
     {
       try{
@@ -239,26 +240,36 @@ else{
         
       }
       catch(PDOException $e){
-        
+        break;
+      }
     }
-  }
-    $popob = FALSE;
-    while  
-    $login = '123';
-    $passl = '123';
+    $popo = rand(10000, 99999);
+    $hoho = md5($popo);
+    
     // Сохраняем в Cookies.
-    setcookie('login', $login);
-    setcookie('pass', $passl);
+    setcookie('login', $lolo);
+    setcookie('pass', $popo);
+    //сохраняем в бд лоло и попо
+    try{
 
-    // TODO: Сохранение данных формы, логина и хеш md5() пароля в базу данных.
-    // ...
+      $stmt = $db->prepare("INSERT INTO lopata SET login = :my_lolo , parol = :my_hoho");
+      $stmt->bindParam(':my_lolo', $lolo);
+      $stmt->bindParam(':my_hoho', $hoho);
+      $stmt->execute();
+      
+    }
+    catch(PDOException $e){
+      print('Error : ' . $e->getMessage());
+      exit();
+    }
+    
     // Сохранение в базу данных формы. Осталось сохранить логин и хеш пароль в бд
 
   //$user = 'u52834'; // Заменить на ваш логин uXXXXX
   //$pass = '5281480'; // Заменить на пароль, такой же, как от SSH
   //$db = new PDO('mysql:host=localhost;dbname=u52834', $user, $pass,
     //[PDO::ATTR_PERSISTENT => true, PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]); // Заменить test на имя БД, совпадает с логином uXXXXX
-  $db = foo();
+  
   // Подготовленный запрос. Не именованные метки.
   try {
     
