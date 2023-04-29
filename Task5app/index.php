@@ -254,9 +254,10 @@ else{
     //сохраняем в бд лоло и попо
     try{
 
-      $stmt = $db->prepare("INSERT INTO lopata SET login = :my_lolo , parol = :my_hoho");
+      $stmt = $db->prepare("INSERT INTO lopata SET login = :my_lolo , parol = :my_hoho, id_z = 1");
       $stmt->bindParam(':my_lolo', $lolo);
       $stmt->bindParam(':my_hoho', $hoho);
+ 
       $stmt->execute();
       
     }
