@@ -10,7 +10,7 @@ function foo()
 }
 header('Content-Type: text/html; charset=UTF-8');
 
-
+//include ('login.php');
 if ($_SERVER['REQUEST_METHOD'] == 'GET') {
 
   $messages = array();
@@ -234,7 +234,7 @@ else{
       //try{
 
         $lolo = rand(1000, 9999);
-        $stmt = $db->prepare("SELECT login FROM lopata WHERE login = :my_lolo");
+        $stmt = $db->prepare("SELECT * FROM lopata WHERE login = :my_lolo");
         $stmt->bindParam(':my_lolo', $lolo);
         $stmt->execute();
         $array = $stmt->fetch(PDO::FETCH_ASSOC);
