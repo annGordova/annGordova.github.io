@@ -53,7 +53,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     setcookie('email_error', '', 100000);
 
     $messages[] = '<div class="error">Заполните почту.</div>';
-  }
+  } 
   if ($errors['year']) {
 
     setcookie('year_error', '', 100000);
