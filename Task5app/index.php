@@ -229,20 +229,22 @@ else{
     $db = foo();
     $lolob = TRUE;
     $lolo = '123';
-    while ($lolob)
-    {
-      try{
+    //while ($lolob)
+    //{
+      //try{
 
         $lolo = rand(1000, 9999);
-        $stmt = $db->prepare("SELECT * FROM lopata WHERE login = :my_lolo");
+        $stmt = $db->prepare("SELECT login FROM lopata WHERE login = :my_lolo");
         $stmt->bindParam(':my_lolo', $lolo);
         $stmt->execute();
+        $array = $stmt->fetch(PDO::FETCH_ASSOC);
+        print($array);
         
-      }
-      catch(PDOException $e){
-        break;
-      }
-    }
+    //  }
+    //  catch(PDOException $e){
+    //    break;
+     // }
+    //}
     $popo = rand(10000, 99999);
     $hoho = md5($popo);
     
