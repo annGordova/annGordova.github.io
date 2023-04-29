@@ -5,7 +5,7 @@ function foo()
   $pass = '5281480'; // Заменить на пароль, такой же, как от SSH
   $db1 = new PDO('mysql:host=localhost;dbname=u52834', $user, $pass,
     [PDO::ATTR_PERSISTENT => true, PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]); // Заменить test на имя БД, совпадает с логином uXXXXX
-  return $db1
+  return $db1;
 
 }
 header('Content-Type: text/html; charset=UTF-8');
@@ -230,9 +230,18 @@ else{
     $lolob = TRUE;
     while ($lolob)
     {
-      $lolo = rand(1000, 9999);
-      prepare
+      try{
+
+        $lolo = rand(1000, 9999);
+        $stmt = $db->prepare("SELECT * FROM lopata WHERE login = :my_lolo");
+        $stmt->bindParam(':my_lolo', $lolo);
+        $stmt->execute();
+        
+      }
+      catch(PDOException $e){
+        
     }
+  }
     $popob = FALSE;
     while  
     $login = '123';
