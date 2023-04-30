@@ -32,6 +32,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
 
 
   $errors = array();
+  
   $errors['name'] = !empty($_COOKIE['name_error']);
   $errors['email'] = !empty($_COOKIE['email_error']);
   $errors['year'] = !empty($_COOKIE['year_error']);
@@ -104,9 +105,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
   if (!empty($_COOKIE[session_name()])) {print('2 условие');}
   if (session_start()) {print('3 условие');}
   if (!empty($_SESSION['login'])) {print('4 условие');}
-  if (empty($errors) && !empty($_COOKIE[session_name()]) &&
-      session_start() && !empty($_SESSION['login'])) {
-         
+  //if (empty($errors) && !empty($_COOKIE[session_name()]) &&
+      //session_start() && !empty($_SESSION['login'])) {
+  if ( !empty($_COOKIE[session_name()]) &&
+        session_start()) {       
     // TODO: загрузить данные пользователя из БД
     // и заполнить переменную $values,
     // предварительно санитизовав.
