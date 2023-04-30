@@ -29,7 +29,7 @@ if (!empty($_SESSION['login'])) {
     <input type="submit" name="exit" value="Выход" />
   </form>
   <?php
-  if($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['name']))
+  if($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['exit']))
   {
       session_destroy();
   }
