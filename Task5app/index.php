@@ -105,7 +105,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
   $k = 0;
   if (empty($errors)) {print('1 условие');}
   foreach($errors as $row)
-  {if ($row) k+=1;}
+  {if ($row) $k=$k+1;}
   print($k);
   
   if (!empty($_COOKIE[session_name()])) {print('2 условие');}
