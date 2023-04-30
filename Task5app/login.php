@@ -53,7 +53,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
 }
 
 else {
-  if(empty())
   $db = foo();
   $stmt = $db->prepare("SELECT l.login, l.parol FROM lopata l");
   $b = False;
