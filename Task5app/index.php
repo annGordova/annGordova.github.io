@@ -276,7 +276,7 @@ else{
     $stmt = $db->prepare("INSERT INTO zayava SET id_z = ?, namee = ?, email = ?, godrod = ?, pol = ?, konech = ?, biogr = ?");
     $stmt->execute([$max_id_z1, $_POST['name'], $_POST['email'], $_POST['year'], $_POST['gender'], $_POST['kon'], $_POST['bio']]);
     
-    $max_id_z = ($db->lastInsertId());
+    
     foreach ($_POST['ability'] as $ability) {
       
       $stmt = $db->prepare("INSERT INTO sposob SET tip = :mytip");
@@ -287,7 +287,7 @@ else{
 
       $stmt = $db->prepare("INSERT INTO svyaz (id_z, id_s) VALUES (:myidz, :myids)");
       $stmt->bindParam(':myids', $max_id_s);
-      $stmt->bindParam(':myidz', $max_id_z);
+      $stmt->bindParam(':myidz', $max_id_z1);
       $stmt->execute();
     }
     
