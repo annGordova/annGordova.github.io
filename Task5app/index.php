@@ -255,7 +255,7 @@ else{
   }
   if (!empty($_COOKIE[session_name()]) &&
       session_start() && !empty($_SESSION['login'])) {
-
+      $db = foo();
       $stmt = $db->prepare("UPDATE zayava SET namee = ?, email = ?, godrod = ?, pol = ?, konech = ?, biogr = ? WHERE id_z IN (SELECT id_z FROM lopata WHERE login = :my_lolo)");
       $stmt->bindParam(':my_lolo', $_SESSION['login']);
     
