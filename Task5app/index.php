@@ -143,7 +143,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
       }
       $values['ability'] = $sp;
       foreach($values['ability'] as $row)
-      {print($row, '/n')}
+      {print($row, '/n');}
     }
     else{
       print('nono');
