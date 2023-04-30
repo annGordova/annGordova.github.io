@@ -21,7 +21,7 @@ if (!empty($_SESSION['login'])) {
   // TODO: Сделать выход (окончание сессии вызовом session_destroy()
   //при нажатии на кнопку Выход).
   // Делаем перенаправление на форму.
-  header('Location: ./');
+  //header('Location: ./');
 }
 
 
@@ -48,7 +48,7 @@ else {
         {$b = True;break;}
     }
   }
-  if (b)
+  if ($b)
   {
     $_SESSION['login'] = $_POST['login'];
     $_SESSION['uid'] = rand(100000000, 9999999999999);
@@ -57,6 +57,6 @@ else {
     print('Пользователь не найден');
   }
   
-  header('Location: ./');
+  //header('Location: ./');
 }
 ?>
