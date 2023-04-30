@@ -103,14 +103,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
   $values['check'] = empty($_COOKIE['check_value']) ? '' : $_COOKIE['check_value'];
 
   $k = 0;
-  if (empty($errors)) {print('1 условие');}
+  if (!$k) {print('1 условие');}
   foreach($errors as $row)
   {if ($row) $k=$k+1;}
-  print($k);
+  //print($k);
   
   if (!empty($_COOKIE[session_name()])) {print('2 условие');}
   //if (session_start()) {print('3 условие');}
   if (!empty($_SESSION['login'])) {print('4 условие');}
+  //if (empty($errors) && !empty($_COOKIE[session_name()]) &&
+      //session_start() && !empty($_SESSION['login'])) {
   if (empty($errors) && !empty($_COOKIE[session_name()]) &&
       session_start() && !empty($_SESSION['login'])) {
   //if ( !empty($_COOKIE[session_name()]) &&
