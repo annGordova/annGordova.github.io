@@ -27,6 +27,7 @@
   <h1> Лаборатория трансплантации "Ноги в руки" </h1>
 </header>
 <content>
+  <a href="login.php">Войти</a>
   <h2>Чтобы записаться на процедуру, заполните анкету:</h2>
   <form action = "index.php" method="POST">
     <ol>

@@ -111,6 +111,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     //$stmt->execute();
     if($result = $stmt->execute()){
       foreach($result as $row){
+        printf('Вход '); 
         $values['name']= $row["namee"];
         $values['email'] = $row["email"];
         $values['year'] = $row["godrod"];
