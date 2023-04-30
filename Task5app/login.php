@@ -42,6 +42,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
 }
 
 else {
+  print('мы снизу');
   $db = foo();
   $stmt = $db->prepare("SELECT l.login, l.parol FROM lopata l");
   $b = False;
