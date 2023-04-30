@@ -107,8 +107,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
   //if (!empty($_SESSION['login'])) {print('4 условие');}
   //if (empty($errors) && !empty($_COOKIE[session_name()]) &&
       //session_start() && !empty($_SESSION['login'])) {
-  //if ( !empty($_COOKIE[session_name()]) &&
-       // session_start()) {       
+  if ( !empty($_COOKIE[session_name()]) &&
+       session_start()) {       
     
     $db = foo();
     $stmt = $db->prepare("SELECT l.login, z.namee, z.email, z.godrod, z.pol, z.konech, z.biogr FROM lopata l, zayava z WHERE l.login = '1876' and l.id_z = z.id_z");
@@ -143,7 +143,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     printf('Вход с логином %s, uid %d', $_SESSION['login'], $_SESSION['uid']);
   }
 
-  include('form.php');
+  //include('form.php');
 }
 else{
   
