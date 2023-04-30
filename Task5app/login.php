@@ -51,7 +51,7 @@ else {
     foreach($stmt as $row){
       $i=$i+1;
       if ($row['login']=$_POST['login'] and $row['parol'] = md5($_POST['pass']))
-        { print($i); print('------')
+        { print($i); print('------');
           print($_POST['login']); print($_POST['pass']);
           print($row['login']);print( $row['parol']);$b = True;break;}
     }
