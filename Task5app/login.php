@@ -60,7 +60,7 @@ else {
     $_SESSION['login'] = $_POST['login'];
     $_SESSION['uid'] = rand(100000000, 9999999999999);
     print($_SESSION['login']);
-    //header('Location: ./');
+    header('Location: ./');
   }
   else{
     print('Пользователь не найден');

@@ -27,16 +27,6 @@
   <h1> Лаборатория трансплантации "Ноги в руки" </h1>
 </header>
 <content>
-  <?php 
-  print('aaaa');
-  print($_SESSION['login']);
-  if (empty($_SESSION['login'])) {
-  ?>
-  <a href="login.php">Войти</a>
-  <?php 
-  }else {?>
-     <a href='logout.php'>На выход</a>
-  <?php }?>
   <h2>Чтобы записаться на процедуру, заполните анкету:</h2>
   <form action = "index.php" method="POST">
     <ol>
