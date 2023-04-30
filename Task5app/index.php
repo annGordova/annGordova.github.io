@@ -102,7 +102,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
   $values['ability'] = empty($_COOKIE['ability_value']) ? array() : json_decode($_COOKIE['ability_value']);
   $values['check'] = empty($_COOKIE['check_value']) ? '' : $_COOKIE['check_value'];
 
-  $k = 0
+  $k = 0;
   if (empty($errors)) {print('1 условие');}
   foreach($errors as $row)
   {if ($row) k+=1;}
