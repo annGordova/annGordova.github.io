@@ -28,7 +28,7 @@
 </header>
 <content>
   <?php 
-  if ($GLOBALS['b']==FALSE) {
+  if ($GLOBALS['b']==TRUE) {
   ?>
   <a href="login.php">Войти</a>
   <?php 
