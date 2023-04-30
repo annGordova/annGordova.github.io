@@ -118,14 +118,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     print('перед ифом');
     if($stmt->execute()){
       foreach($stmt as $row){
-        print('Вход '); 
+        print('Вход \n'); 
+
         $values['name']= $row["namee"];
         $values['email'] = $row["email"];
         $values['year'] = $row["godrod"];
         $values['kon'] = $row["konech"];
         $values['gender'] = $row["pol"];
         $values['bio'] = $row["biogr"];
-
+        print($values);
       }
     }
     else{
