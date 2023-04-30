@@ -21,6 +21,7 @@ if (!empty($_SESSION['login'])) {
   
   // TODO: Сделать выход (окончание сессии вызовом session_destroy()
   //при нажатии на кнопку Выход).
+  print('Вы вошли под логином ' + str(($_SESSION['login'])) + '. Вы можете выйти или войти под другим логином.');
   ?>
   <form action="" method="post">
     <input type="submit" name="exit" value="Выход" />
@@ -31,7 +32,7 @@ if (!empty($_SESSION['login'])) {
       session_destroy();
   }
   // Делаем перенаправление на форму.
-  print(($_SESSION['login']));
+  
   //header('Location: ./');
 }
 
