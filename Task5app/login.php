@@ -48,8 +48,8 @@ else {
   $b = False;
   if($stmt->execute()){
     foreach($stmt as $row){
-      print($_POST['login'], $_POST['pass']);
-      print($row['login'], $row['parol']);
+      print($_POST['login']); print($_POST['pass']);
+      print($row['login']);print( $row['parol']);
       if ($row['login']=$_POST['login'] and $row['parol'] = md5($_POST['pass']))
         {$b = True;break;}
     }
