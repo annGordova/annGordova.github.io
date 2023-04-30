@@ -31,7 +31,7 @@ if (!empty($_SESSION['login'])) {
       session_destroy();
   }
   // Делаем перенаправление на форму.
-  //print(($_SESSION['login']));
+  print(($_SESSION['login']));
   //header('Location: ./');
 }
 
