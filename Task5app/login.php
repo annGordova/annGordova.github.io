@@ -22,7 +22,6 @@ if (!empty($_SESSION['login'])) {
   // TODO: Сделать выход (окончание сессии вызовом session_destroy()
   //при нажатии на кнопку Выход).
   // Делаем перенаправление на форму.
-  print('мы сверху');
   print(($_SESSION['login']));
   header('Location: ./');
 }
@@ -42,7 +41,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
 }
 
 else {
-  print('мы снизу');
+
   $db = foo();
   $stmt = $db->prepare("SELECT l.login, l.parol FROM lopata l");
   $b = False;
@@ -61,6 +60,7 @@ else {
   }
   else{
     print('Пользователь не найден');
+    sleep(5);
   }
   
   header('Location: ./');
