@@ -52,7 +52,7 @@ else {
       $i=$i+1;
       if ($row['login']=$_POST['login'] and $row['parol'] = md5($_POST['pass']))
         { print($i); print('------');
-          print($_POST['login']); print($_POST['pass']);
+          print($_POST['login']); print($_POST['pass']); print('+++++');
           print($row['login']);print( $row['parol']);$b = True;break;}
     }
   }
