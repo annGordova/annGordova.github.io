@@ -102,10 +102,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
   $values['ability'] = empty($_COOKIE['ability_value']) ? array() : json_decode($_COOKIE['ability_value']);
   $values['check'] = empty($_COOKIE['check_value']) ? '' : $_COOKIE['check_value'];
   if (empty($errors)) {print('1 условие');}
-  foreach($errors as $row)
-  {
-    print($row);
-  }
+  print_r($errors);
+  
   if (!empty($_COOKIE[session_name()])) {print('2 условие');}
   //if (session_start()) {print('3 условие');}
   if (!empty($_SESSION['login'])) {print('4 условие');}
