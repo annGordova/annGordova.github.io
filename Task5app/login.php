@@ -32,7 +32,7 @@ if (!empty($_SESSION['login'])) {
   }
   // Делаем перенаправление на форму.
   //print(($_SESSION['login']));
-  header('Location: ./');
+  //header('Location: ./');
 }
 
 
