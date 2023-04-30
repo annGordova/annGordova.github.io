@@ -21,8 +21,17 @@ if (!empty($_SESSION['login'])) {
   
   // TODO: Сделать выход (окончание сессии вызовом session_destroy()
   //при нажатии на кнопку Выход).
+  ?>
+  <form action="" method="post">
+    <input type="submit" name="exit" value="Выход" />
+  </form>
+  <?php
+  if($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['name']))
+  {
+      session_destroy();
+  }
   // Делаем перенаправление на форму.
-  print(($_SESSION['login']));
+  //print(($_SESSION['login']));
   header('Location: ./');
 }
 
