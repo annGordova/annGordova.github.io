@@ -21,7 +21,7 @@ if (!empty($_SESSION['login'])) {
   // TODO: Сделать выход (окончание сессии вызовом session_destroy()
   //при нажатии на кнопку Выход).
   // Делаем перенаправление на форму.
-  //header('Location: ./');
+  header('Location: ./');
 }
 
 
@@ -58,6 +58,6 @@ else {
     print('Пользователь не найден');
   }
   
-  //header('Location: ./');
+  header('Location: ./');
 }
 ?>
