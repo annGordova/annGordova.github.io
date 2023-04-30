@@ -112,7 +112,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     session_start();
     
     $db = foo();
-    $stmt = $db->prepare("SELECT l.login, z.namee, z.email, z.godrod, z.pol, z.konech, z.biogr FROM lopata l, zayava z WHERE l.login = $_SESSION['login'] and l.id_z = z.id_z");
+    $stmt = $db->prepare("SELECT l.login, z.namee, z.email, z.godrod, z.pol, z.konech, z.biogr FROM lopata l, zayava z WHERE l.login = :my_lolo and l.id_z = z.id_z");
+    $stmt->bindParam(':my_lolo',  $_SESSION['login']);     
 
 
     if($stmt->execute()){
@@ -130,7 +131,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     }
     
     $sp = array();
-    $stmt = $db->prepare("SELECT s.tip FROM lopata l, zayava z, sposob s, svyaz sz WHERE l.login = '1876' and l.id_z = z.id_z and z.id_z = sz.id_z and sz.id_s = s.id_s");       
+    $stmt = $db->prepare("SELECT s.tip FROM lopata l, zayava z, sposob s, svyaz sz WHERE l.login = '1876' and l.id_z = z.id_z and z.id_z = sz.id_z and sz.id_s = s.id_s");  
     if($stmt->execute()){
       foreach($stmt as $row){
         array_push($sp, $row['tip']);
@@ -141,7 +142,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     
     
 
-    printf('Вход с логином %s, uid %d', $_SESSION['login'], $_SESSION['uid']);
+    printf('Вход с логином %s, uid %d', $_SESSION['login']);
   }
 
   include('form.php');
