@@ -256,10 +256,15 @@ else{
   if (!empty($_COOKIE[session_name()]) &&
       session_start() && !empty($_SESSION['login'])) {
       $db = foo();
-      $stmt = $db->prepare("UPDATE zayava SET namee = ?, email = ?, godrod = ?, pol = ?, konech = ?, biogr = ? WHERE id_z IN (SELECT id_z FROM lopata WHERE login = :my_lolo)");
+      $stmt = $db->prepare("UPDATE zayava SET namee = :my_namee, email = :my_email, godrod = :my_godrod, pol = :my_pol, konech = :my_konech, biogr = :my_biogr WHERE id_z IN (SELECT id_z FROM lopata WHERE login = :my_lolo)");
+      $stmt->bindParam(':my_namee', $_POST['name']);
+      $stmt->bindParam(':my_email', $_POST['email']);
+      $stmt->bindParam(':my_godrod', $_POST['year']);
+      $stmt->bindParam(':my_pol', $_POST['gender']);
+      $stmt->bindParam(':my_konech', $_POST['kon']);
+      $stmt->bindParam(':my_biogr', $_POST['bio']);
       $stmt->bindParam(':my_lolo', $_SESSION['login']);
-    
-      $stmt->execute([$_POST['name'], $_POST['email'], $_POST['year'], $_POST['gender'], $_POST['kon'], $_POST['bio']]);
+      $stmt->execute();
   }
   else {
     // Генерируем уникальный логин и пароль.
