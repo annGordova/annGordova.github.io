@@ -28,6 +28,8 @@
 </header>
 <content>
   <?php 
+  print('aaaa');
+  print($_SESSION['login']);
   if (empty($_SESSION['login'])) {
   ?>
   <a href="login.php">Войти</a>
