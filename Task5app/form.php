@@ -28,7 +28,7 @@
 </header>
 <content>
   <?php 
-  if ($_GLOBALS['b']==FALSE) {
+  if (empty($_SESSION['login'])) {
   ?>
   <a href="login.php">Войти</a>
   <?php 

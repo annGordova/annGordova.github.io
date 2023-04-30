@@ -12,7 +12,7 @@ function foo()
 header('Content-Type: text/html; charset=UTF-8');
 
 
-session_start();
+
 
 // В суперглобальном массиве $_SESSION хранятся переменные сессии.
 // Будем сохранять туда логин после успешной авторизации.
@@ -56,6 +56,7 @@ else {
   $_GLOBALS['b']=$b;
   if ($b)
   {
+    session_start();
     $_SESSION['login'] = $_POST['login'];
     $_SESSION['uid'] = rand(100000000, 9999999999999);
     header('Location: ./');
