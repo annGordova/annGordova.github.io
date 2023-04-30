@@ -32,7 +32,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
   <input name="login" />
   <input name="pass" />
   <input type="submit" value="Войти" />
-
+  
 </form>
 
 <?php

@@ -103,7 +103,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
   $values['check'] = empty($_COOKIE['check_value']) ? '' : $_COOKIE['check_value'];
   if (empty($errors)) {print('1 условие');}
   if (!empty($_COOKIE[session_name()])) {print('2 условие');}
-  if (session_start()) {print('3 условие');}
+  //if (session_start()) {print('3 условие');}
   if (!empty($_SESSION['login'])) {print('4 условие');}
   //if (empty($errors) && !empty($_COOKIE[session_name()]) &&
       //session_start() && !empty($_SESSION['login'])) {
@@ -116,8 +116,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     $stmt = $db->prepare("SELECT l.login, z.namee, z.email, z.godrod, z.pol, z.konech, z.biogr FROM lopata l, zayava z WHERE l.login = '1876'");
     //$stmt->execute();
     print('перед ифом');
-    if($result = $stmt->execute()){
-      foreach($result as $row){
+    if($stmt->execute()){
+      foreach($stmt as $row){
         print('Вход '); 
         $values['name']= $row["namee"];
         $values['email'] = $row["email"];
