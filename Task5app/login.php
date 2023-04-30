@@ -32,22 +32,31 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
   <input name="login" />
   <input name="pass" />
   <input type="submit" value="Войти" />
-  
+
 </form>
 
 <?php
 }
 
 else {
-
-  // TODO: Проверть есть ли такой логин и пароль в базе данных.
-  // Выдать сообщение об ошибках.
-
-  // Если все ок, то авторизуем пользователя.
-  $_SESSION['login'] = $_POST['login'];
-  // Записываем ID пользователя.
-  $_SESSION['uid'] = 123;
-
-  // Делаем перенаправление.
+  $db = foo();
+  $stmt = $db->prepare("SELECT l.login, l.parol FROM lopata l");
+  $b = False
+  if($stmt->execute()){
+    foreach($stmt as $row){
+      if ($row['login']=$_POST['login'] and $row['parol'] = md5($_POST['pass']))
+        {$b = True;break;}
+    }
+  }
+  if (b)
+  {
+    $_SESSION['login'] = $_POST['login'];
+    $_SESSION['uid'] = rand(100000000, 9999999999999);
+  }
+  else{
+    print('Пользователь не найден');
+  }
+  
   header('Location: ./');
 }
+?>

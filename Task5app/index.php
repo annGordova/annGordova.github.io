@@ -101,17 +101,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
   $values['bio'] = empty($_COOKIE['bio_value']) ? '' : $_COOKIE['bio_value'];
   $values['ability'] = empty($_COOKIE['ability_value']) ? array() : json_decode($_COOKIE['ability_value']);
   $values['check'] = empty($_COOKIE['check_value']) ? '' : $_COOKIE['check_value'];
-  if (empty($errors)) {print('1 условие');}
-  if (!empty($_COOKIE[session_name()])) {print('2 условие');}
+  //if (empty($errors)) {print('1 условие');}
+  //if (!empty($_COOKIE[session_name()])) {print('2 условие');}
   //if (session_start()) {print('3 условие');}
-  if (!empty($_SESSION['login'])) {print('4 условие');}
-  //if (empty($errors) && !empty($_COOKIE[session_name()]) &&
-      //session_start() && !empty($_SESSION['login'])) {
-  if ( !empty($_COOKIE[session_name()]) &&
-        session_start()) {       
-    // TODO: загрузить данные пользователя из БД
-    // и заполнить переменную $values,
-    // предварительно санитизовав.
+  //if (!empty($_SESSION['login'])) {print('4 условие');}
+  if (empty($errors) && !empty($_COOKIE[session_name()]) &&
+      session_start() && !empty($_SESSION['login'])) {
+  //if ( !empty($_COOKIE[session_name()]) &&
+       // session_start()) {       
+    
     $db = foo();
     $stmt = $db->prepare("SELECT l.login, z.namee, z.email, z.godrod, z.pol, z.konech, z.biogr FROM lopata l, zayava z WHERE l.login = '1876' and l.id_z = z.id_z");
     //$stmt->execute();
@@ -126,7 +124,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
         $values['kon'] = $row["konech"];
         $values['gender'] = $row["pol"];
         $values['bio'] = $row["biogr"];
-        print($values['name']);
+
       }
     }
     
@@ -134,14 +132,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     $stmt = $db->prepare("SELECT s.tip FROM lopata l, zayava z, sposob s, svyaz sz WHERE l.login = '1876' and l.id_z = z.id_z and z.id_z = sz.id_z and sz.id_s = s.id_s");       
     if($stmt->execute()){
       foreach($stmt as $row){
-
         array_push($sp, $row['tip']);
-        
-
       }
       $values['ability'] = $sp;
-      foreach($values['ability'] as $row)
-      {print($row);}
+
     }
     
     
@@ -149,7 +143,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     printf('Вход с логином %s, uid %d', $_SESSION['login'], $_SESSION['uid']);
   }
 
-  //include('form.php');
+  include('form.php');
 }
 else{
   
@@ -261,7 +255,7 @@ else{
       session_start() && !empty($_SESSION['login'])) {
     // TODO: перезаписать данные в БД новыми данными,
     // кроме логина и пароля.
-    printf('Не туды'); 
+
   }
   else {
     // Генерируем уникальный логин и пароль.
