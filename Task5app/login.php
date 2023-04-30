@@ -53,7 +53,7 @@ else {
         {$b = True;break;}
     }
   }
-  $GLOBALS['b']=$b;
+  $_GLOBALS['b']=$b;
   if ($b)
   {
     $_SESSION['login'] = $_POST['login'];
