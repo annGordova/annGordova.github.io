@@ -106,6 +106,23 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     // TODO: загрузить данные пользователя из БД
     // и заполнить переменную $values,
     // предварительно санитизовав.
+    $db = foo();
+    $stmt = $db->prepare("SELECT l.login, z.namee, z.email, z.godrod, z.pol, z.konech, z.biogr FROM lopata l, zayava z WHERE l.login = $_POST['login']");
+    //$stmt->execute();
+    if($result = $stmt->execute()){
+      foreach($result as $row){
+        $values['name']= $row["namee"];
+        $values['email'] = $row["email"];
+        $values['year'] = $row["godrod"];
+        $values['kon'] = $row["konech"];
+        $values['gender'] = $row["pol"];
+        $values['bio'] = $row["biogr"];
+
+      }
+    }       
+ 
+    
+
     printf('Вход с логином %s, uid %d', $_SESSION['login'], $_SESSION['uid']);
   }
 
