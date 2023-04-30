@@ -9,7 +9,7 @@ function foo()
 }
 header('Content-Type: text/html; charset=UTF-8');
 
-
+global $b = NAN;
 if ($_SERVER['REQUEST_METHOD'] == 'GET') {
 
   $messages = array();

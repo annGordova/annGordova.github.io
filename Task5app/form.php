@@ -28,7 +28,7 @@
 </header>
 <content>
   <?php 
-  if ($b) {
+  if () {
   ?>
   <a href="login.php">Войти</a>
   <?php 
