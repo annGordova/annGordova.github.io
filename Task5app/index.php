@@ -121,6 +121,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
         $values['bio'] = $row["biogr"];
 
       }
+    }
+    else{
+      print('nono');
     }       
  
     
