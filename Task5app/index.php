@@ -101,8 +101,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
   $values['bio'] = empty($_COOKIE['bio_value']) ? '' : $_COOKIE['bio_value'];
   $values['ability'] = empty($_COOKIE['ability_value']) ? array() : json_decode($_COOKIE['ability_value']);
   $values['check'] = empty($_COOKIE['check_value']) ? '' : $_COOKIE['check_value'];
+
+  $k = 0
   if (empty($errors)) {print('1 условие');}
-  print_r($errors);
+  foreach($errors as $row)
+  {if ($row) k+=1;}
+  print($k);
   
   if (!empty($_COOKIE[session_name()])) {print('2 условие');}
   //if (session_start()) {print('3 условие');}
