@@ -103,7 +103,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
   $values['check'] = empty($_COOKIE['check_value']) ? '' : $_COOKIE['check_value'];
 
   $k = 0;
-  if (!$k) {print('1 условие');}
+
   foreach($errors as $row)
   {if ($row) $k=$k+1;}
  
@@ -142,7 +142,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     
     
 
-    printf('Вход с логином %s, uid %d', $_SESSION['login']);
+    printf('Вход с логином %s ', $_SESSION['login']);
   }
 
   include('form.php');
