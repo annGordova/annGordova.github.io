@@ -28,7 +28,7 @@ if (!empty($_SESSION['login'])) {
 if ($_SERVER['REQUEST_METHOD'] == 'GET') {
 ?>
 
-<form action="index.php" method="post">
+<form action="" method="post">
   <input name="login" />
   <input name="pass" />
   <input type="submit" value="Войти" />
