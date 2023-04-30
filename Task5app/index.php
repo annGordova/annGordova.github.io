@@ -255,9 +255,11 @@ else{
   }
   if (!empty($_COOKIE[session_name()]) &&
       session_start() && !empty($_SESSION['login'])) {
-    // TODO: перезаписать данные в БД новыми данными,
-    // кроме логина и пароля.
 
+      $stmt = $db->prepare("UPDATE zayava SET namee = ?, email = ?, godrod = ?, pol = ?, konech = ?, biogr = ? WHERE id_z IN (SELECT id_z FROM lopata WHERE login = :my_lolo)");
+      $stmt->bindParam(':my_lolo', $_SESSION['login']);
+    
+      $stmt->execute([$_POST['name'], $_POST['email'], $_POST['year'], $_POST['gender'], $_POST['kon'], $_POST['bio']]);
   }
   else {
     // Генерируем уникальный логин и пароль.
