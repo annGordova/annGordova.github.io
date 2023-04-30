@@ -60,7 +60,9 @@ else {
   }
   else{
     print('Пользователь не найден');
-    sleep(5);
+    ?>
+    <a href="index.php">Войти</a>
+    <?php
   }
   
   header('Location: ./');
