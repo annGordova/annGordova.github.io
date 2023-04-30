@@ -113,11 +113,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
   if (!empty($_SESSION['login'])) {print('4 условие');}
   //if (empty($errors) && !empty($_COOKIE[session_name()]) &&
       //session_start() && !empty($_SESSION['login'])) {
-  print($GLOBALS['login']);
   if ($k!=0 && !empty($_COOKIE[session_name()]) && session_start()) {
+    print('yeee')
   //if ( !empty($_COOKIE[session_name()]) &&
        //session_start()) {       
-    //print($GLOBALS['login']);
     $db = foo();
     $stmt = $db->prepare("SELECT l.login, z.namee, z.email, z.godrod, z.pol, z.konech, z.biogr FROM lopata l, zayava z WHERE l.login = '1876' and l.id_z = z.id_z");
     //$stmt->execute();
