@@ -33,7 +33,7 @@
   <a href="login.php">Войти</a>
   <?php 
   }else {?>
-    <h2>кнопочка на выход</h2>
+     <a href='logout.php'>На выход</a>
   <?php }?>
   <h2>Чтобы записаться на процедуру, заполните анкету:</h2>
   <form action = "index.php" method="POST">
