@@ -6,11 +6,10 @@ function foo()
   $db1 = new PDO('mysql:host=localhost;dbname=u52834', $user, $pass,
     [PDO::ATTR_PERSISTENT => true, PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]); // Заменить test на имя БД, совпадает с логином uXXXXX
   return $db1;
-
 }
 header('Content-Type: text/html; charset=UTF-8');
 
-//include ('login.php');
+
 if ($_SERVER['REQUEST_METHOD'] == 'GET') {
 
   $messages = array();
@@ -229,22 +228,24 @@ else{
     $db = foo();
     $lolob = TRUE;
     $lolo = '123';
-    //while ($lolob)
-    //{
-      //try{
+    while ($lolob)
+    {
+      try{
 
         $lolo = rand(1000, 9999);
-        $stmt = $db->prepare("SELECT * FROM lopata WHERE login = :my_lolo");
-        $stmt->bindParam(':my_lolo', $lolo);
-        $stmt->execute();
-        $array = $stmt->fetch(PDO::FETCH_ASSOC);
-        print($array);
-        
-    //  }
-    //  catch(PDOException $e){
-    //    break;
-     // }
-    //}
+        $sql = $db ->prepare ("SELECT * FROM lopata WHERE login = $lolo");
+        $lolob = False;
+        if($result = $sql->execute()){
+          foreach($result as $row){
+            $lolob = True;
+          }
+        }       
+      }
+      catch(PDOException $e){
+        print('Error : ' . $e->getMessage());
+        exit();
+      }
+    }
     $popo = rand(10000, 99999);
     $hoho = md5($popo);
     
@@ -254,11 +255,12 @@ else{
     //сохраняем в бд лоло и попо
     try{
 
-      $stmt = $db->prepare("INSERT INTO lopata SET login = :my_lolo , parol = :my_hoho, id_z = 2");
+      $stmt = $db->prepare("INSERT INTO lopata SET login = :my_lolo , parol = :my_hoho");
       $stmt->bindParam(':my_lolo', $lolo);
       $stmt->bindParam(':my_hoho', $hoho);
  
       $stmt->execute();
+      $max_id_z1 = ($db->lastInsertId());
       
     }
     catch(PDOException $e){
@@ -268,26 +270,15 @@ else{
     
     // Сохранение в базу данных формы. Осталось сохранить логин и хеш пароль в бд
 
-  //$user = 'u52834'; // Заменить на ваш логин uXXXXX
-  //$pass = '5281480'; // Заменить на пароль, такой же, как от SSH
-  //$db = new PDO('mysql:host=localhost;dbname=u52834', $user, $pass,
-    //[PDO::ATTR_PERSISTENT => true, PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]); // Заменить test на имя БД, совпадает с логином uXXXXX
   
-  // Подготовленный запрос. Не именованные метки.
   try {
     
-    $stmt = $db->prepare("INSERT INTO zayava SET namee = ?, email = ?, godrod = ?, pol = ?, konech = ?, biogr = ?");
-    $stmt->execute([$_POST['name'], $_POST['email'], $_POST['year'], $_POST['gender'], $_POST['kon'], $_POST['bio']]);
-    //foreach ($_POST['abilities'] as $ability)
-    //{
-    //  print($ability);
-    //}
-    //$human = "SELECT MAX(id_z) maxidz FROM zayava"; 
+    $stmt = $db->prepare("INSERT INTO zayava SET id_z = ?, namee = ?, email = ?, godrod = ?, pol = ?, konech = ?, biogr = ?");
+    $stmt->execute([$max_id_z1, $_POST['name'], $_POST['email'], $_POST['year'], $_POST['gender'], $_POST['kon'], $_POST['bio']]);
+    
     $max_id_z = ($db->lastInsertId());
     foreach ($_POST['ability'] as $ability) {
-      //print($ability);
-      //$stmt = $db->prepare("INSERT INTO sposob SET tip = ? ");
-      //$stmt->execute([$_POST['$ability']]);
+      
       $stmt = $db->prepare("INSERT INTO sposob SET tip = :mytip");
       $stmt->bindParam(':mytip', $ability);
       $stmt->execute();
@@ -306,35 +297,12 @@ else{
     exit();
   }
   }
-  //
+ 
   
   setcookie('save', '1');
   header('Location: index.php');
 }
 
 
-
-
-
-//  stmt - это "дескриптор состояния".
- 
-//  Именованные метки.
-//$stmt = $db->prepare("INSERT INTO test (label,color) VALUES (:label,:color)");
-//$stmt -> execute(['label'=>'perfect', 'color'=>'green']);
- 
-//Еще вариант
-/*$stmt = $db->prepare("INSERT INTO users (firstname, lastname, email) VALUES (:firstname, :lastname, :email)");
-$stmt->bindParam(':firstname', $firstname);
-$stmt->bindParam(':lastname', $lastname);
-$stmt->bindParam(':email', $email);
-$firstname = "John";
-$lastname = "Smith";
-$email = "john@test.com";
-$stmt->execute();
-*/
-
-// Делаем перенаправление.
-// Если запись не сохраняется, но ошибок не видно, то можно закомментировать эту строку чтобы увидеть ошибку.
-// Если ошибок при этом не видно, то необходимо настроить параметр display_errors для PHP.
 
 ?>
