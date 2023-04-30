@@ -47,11 +47,13 @@ else {
   $stmt = $db->prepare("SELECT l.login, l.parol FROM lopata l");
   $b = False;
   if($stmt->execute()){
+    $i=0;
     foreach($stmt as $row){
-      print($_POST['login']); print($_POST['pass']);
-      print($row['login']);print( $row['parol']);
+      $i=$i+1;
       if ($row['login']=$_POST['login'] and $row['parol'] = md5($_POST['pass']))
-        {$b = True;break;}
+        { print($i); print('------')
+          print($_POST['login']); print($_POST['pass']);
+          print($row['login']);print( $row['parol']);$b = True;break;}
     }
   }
   if ($b)
