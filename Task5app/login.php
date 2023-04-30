@@ -22,6 +22,7 @@ if (!empty($_SESSION['login'])) {
   //при нажатии на кнопку Выход).
   // Делаем перенаправление на форму.
   print('мы сверху');
+  print(($_SESSION['login']))
   //header('Location: ./');
 }
 
