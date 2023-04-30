@@ -62,7 +62,8 @@ else {
   else{
     print('Пользователь не найден');
     ?>
-    <a href="index.php">Войти</a>
+    <br/>
+    <a href="index.php">На главную</a>
     <?php
   }
   
