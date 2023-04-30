@@ -141,6 +141,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
         
         print($row['tip']);
       }
+      $values['ability'] = $sp;
+      foreach($values['ability'] as $row)
+      {print($row, '/n')}
     }
     else{
       print('nono');
