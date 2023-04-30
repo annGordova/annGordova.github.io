@@ -29,9 +29,18 @@ if (!empty($_SESSION['login'])) {
     <input type="submit" name="exit" value="Выход" />
   </form>
   <?php
+  $a = False
   if($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['exit']))
   {
-      session_destroy();
+    $a = True;  
+    session_destroy();
+  }
+  if ($a)
+  {
+    print('Вы вышли из аккаутна');
+    ?>
+    <a href="index.php">На главную</a>
+    <?php
   }
   // Делаем перенаправление на форму.
   
