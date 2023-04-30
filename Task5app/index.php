@@ -113,7 +113,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
   if (!empty($_SESSION['login'])) {print('4 условие');}
   //if (empty($errors) && !empty($_COOKIE[session_name()]) &&
       //session_start() && !empty($_SESSION['login'])) {
-  if ($k!=0 && !empty($_COOKIE[session_name()]) && session_start()) {
+  if (!$k && !empty($_COOKIE[session_name()]) ) {
     print('yeee');
   //if ( !empty($_COOKIE[session_name()]) &&
        //session_start()) {       
