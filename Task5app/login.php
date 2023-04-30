@@ -37,7 +37,7 @@ if (!empty($_SESSION['login'])) {
   }
   if ($a)
   {
-    print('Вы вышли из аккаутна');
+    print('Вы вышли из аккаунта.');
     ?>
     <a href="index.php">На главную</a>
     <?php
@@ -71,14 +71,7 @@ else if (!empty($_POST['login'])){
     foreach($stmt as $row){
 
       if ($row['login']==$_POST['login'] and $row['parol'] == md5($_POST['pass']))
-        {print($row['login']);
-          print('   ');
-          print($_POST['login']);
-          print('   ');
-          print($row['parol']);
-          print('   ');
-          print($_POST['pass']);
-          print('   ');
+        {
           $b = True;break;}
     }
   }
