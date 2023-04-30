@@ -41,7 +41,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
 else {
   $db = foo();
   $stmt = $db->prepare("SELECT l.login, l.parol FROM lopata l");
-  $b = False
+  $b = False;
   if($stmt->execute()){
     foreach($stmt as $row){
       if ($row['login']=$_POST['login'] and $row['parol'] = md5($_POST['pass']))
