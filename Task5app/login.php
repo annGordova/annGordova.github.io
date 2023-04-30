@@ -19,7 +19,7 @@ session_start();
 if (!empty($_SESSION['login'])) {
   // Если есть логин в сессии, то пользователь уже авторизован.
   
-  // TODO: Сделать выход (окончание сессии вызовом session_destroy()
+  //выход (окончание сессии вызовом session_destroy()
   //при нажатии на кнопку Выход).
   print('Вы вошли под логином ');
   print((($_SESSION['login'])));
@@ -42,9 +42,7 @@ if (!empty($_SESSION['login'])) {
     <a href="index.php">На главную</a>
     <?php
   }
-  // Делаем перенаправление на форму.
   
-  //header('Location: ./');
 }
 
 
