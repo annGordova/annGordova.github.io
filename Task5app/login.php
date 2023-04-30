@@ -58,6 +58,6 @@ else {
     print('Пользователь не найден');
   }
   
-  header('Location: ./');
+  //header('Location: ./');
 }
 ?>
