@@ -35,7 +35,7 @@ if (!empty($_SESSION['login'])) {
   }
   // Делаем перенаправление на форму.
   
-  header('Location: ./');
+  //header('Location: ./');
 }
 
 
@@ -53,6 +53,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
 }
 
 else {
+  
   $db = foo();
   $stmt = $db->prepare("SELECT l.login, l.parol FROM lopata l");
   $b = False;
@@ -61,7 +62,15 @@ else {
     foreach($stmt as $row){
 
       if ($row['login']==$_POST['login'] and $row['parol'] == md5($_POST['pass']))
-        {$b = True;break;}
+        {print($row['login']);
+          print('   ');
+          print($_POST['login']);
+          print('   ');
+          print($row['parol']);
+          print('   ');
+          print($_POST['pass']);
+          print('   ');
+          $b = True;break;}
     }
   }
   
