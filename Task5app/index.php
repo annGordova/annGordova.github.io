@@ -90,7 +90,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     $messages[] = '<div class="error">Согласитесь с контрактом.</div>';
   }
 
-  print('Вход '); 
+ 
   
   $values = array();
   $values['name'] = empty($_COOKIE['name_value']) ? '' : $_COOKIE['name_value'];
@@ -115,10 +115,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     $db = foo();
     $stmt = $db->prepare("SELECT l.login, z.namee, z.email, z.godrod, z.pol, z.konech, z.biogr FROM lopata l, zayava z WHERE l.login = '1876' and l.id_z = z.id_z");
     //$stmt->execute();
-    print('перед ифом');
+
     if($stmt->execute()){
       foreach($stmt as $row){
-        print('Вход \n'); 
+  
 
         $values['name']= $row["namee"];
         $values['email'] = $row["email"];
@@ -129,25 +129,21 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
         print($values['name']);
       }
     }
-    else{
-      print('nono');
-    }
+    
     $sp = array();
     $stmt = $db->prepare("SELECT s.tip FROM lopata l, zayava z, sposob s, svyaz sz WHERE l.login = '1876' and l.id_z = z.id_z and z.id_z = sz.id_z and sz.id_s = s.id_s");       
     if($stmt->execute()){
       foreach($stmt as $row){
-        print('Вход \n'); 
+
         array_push($sp, $row['tip']);
         
-        print($row['tip']);
+
       }
       $values['ability'] = $sp;
       foreach($values['ability'] as $row)
       {print($row);}
     }
-    else{
-      print('nono');
-    }
+    
     
 
     printf('Вход с логином %s, uid %d', $_SESSION['login'], $_SESSION['uid']);
