@@ -126,7 +126,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
         $values['kon'] = $row["konech"];
         $values['gender'] = $row["pol"];
         $values['bio'] = $row["biogr"];
-        print($values);
+        print($values['name'], $values['email'],$values['year'],$values['kon'],$values['gender'],$values['bio']);
       }
     }
     else{
