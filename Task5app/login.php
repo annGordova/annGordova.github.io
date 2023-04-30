@@ -48,11 +48,10 @@ else {
         {$b = True;break;}
     }
   }
-  if ($b)
+  if (b)
   {
     $_SESSION['login'] = $_POST['login'];
     $_SESSION['uid'] = rand(100000000, 9999999999999);
-    print($_SESSION['login']);
   }
   else{
     print('Пользователь не найден');
