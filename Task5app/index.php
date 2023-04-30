@@ -114,7 +114,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
   //if (empty($errors) && !empty($_COOKIE[session_name()]) &&
       //session_start() && !empty($_SESSION['login'])) {
   if ($k!=0 && !empty($_COOKIE[session_name()]) && session_start()) {
-    print('yeee')
+    print('yeee');
   //if ( !empty($_COOKIE[session_name()]) &&
        //session_start()) {       
     $db = foo();
