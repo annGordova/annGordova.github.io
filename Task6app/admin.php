@@ -34,16 +34,39 @@ $stmt = $db->prepare("SELECT l.login, z.namee, z.email, z.godrod, z.pol, z.konec
 
 if($stmt->execute()){
   foreach($stmt as $row){
+    $values['login'] = $row['login'];
     $values['name']= $row["namee"];
     $values['email'] = $row["email"];
     $values['year'] = $row["godrod"];
     $values['kon'] = $row["konech"];
     $values['gender'] = $row["pol"];
     $values['bio'] = $row["biogr"];
+
     print($values['name']);    
 
   }
 }
+
+$rows = 20; // количество строк, tr
+$cols = 20; // количество столбцов, td
+
+echo '<table border="1">';
+
+for ($tr=1; $tr<=$rows; $tr++){ // в этом цикле счётчик $tr 
+    // следит за количеством строк и всегда равен текущему номеру строки.
+    // То есть в начале $tr=1, так как в начале у нас 1 строка, затем
+    // каждый раз прибавляем единицу, пока не дойдём до заданного количества
+    // $rows.
+    echo '<tr>';
+    for ($td=1; $td<=$cols; $td++){ // в этом цикле счётчик $td аналогичен
+                                    // счётчику $tr.
+        echo '<td>'. $tr*$td .'</td>';
+    }
+    echo '</tr>';
+}
+
+echo '</table>';
+
 
 
 
