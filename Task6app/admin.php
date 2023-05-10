@@ -27,7 +27,9 @@ function tootoo($l, $n, $e, $y, $k, $g, $b)
   $stmt2->execute();
   foreach($stmt2 as $row)
   {
-    print($row);
+    $a = $row['id_z'];
+    print($a);
+    //print($row);
   }
 }
 /**
