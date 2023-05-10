@@ -42,7 +42,6 @@ if($stmt->execute()){
   foreach($stmt as $row){
     $values['login'] = $row['login'];
     $values['name']= $row["namee"];
-    $values['email'] = $row["email"];
     $values['year'] = $row["godrod"];
     $values['kon'] = $row["konech"];
     $values['gender'] = $row["pol"];
@@ -72,7 +71,7 @@ foreach ($stmt as $v){
     break;
   }
 }
-$stmt = $db->prepare("SELECT count(*) FROM sposob s WHERE s.tip = 'stenochod'"); 
+$stmt = $db->prepare("SELECT count(*) FROM sposob s WHERE s.tip = 'stenchod'"); 
 $stmt->execute();
 foreach ($stmt as $v){
   foreach($v as $vv){
