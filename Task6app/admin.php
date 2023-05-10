@@ -50,14 +50,12 @@ if($stmt->execute()){
     $values['bio'] = $row["biogr"];
     echo '<tr>';
     echo '<td><input name="login" value = '.  $values['login'] .'></td>';
-    echo '<td><input name="login" value = '.  $values['name'] .'></td>';
-    echo '<td><input name="login" value = '.  $values['email'] .'></td>';
-    echo '<td><input name="login" value = '.  $values['year'] .'></td>';
-    echo '<td><input name="login" value = '.  $values['kon'] .'></td>';
-    echo '<td><input name="login" value = '.  $values['gender'] .'></td>';
-    echo '<td><input name="login" value = '.  $values['bio'] .'></td>';
-    echo '<td><input name="login" value = '.  $values['login'] .'></td>';
-    
+    echo '<td><input name="name" value = '.  $values['name'] .'></td>';
+    echo '<td><input name="email" value = '.  $values['email'] .'></td>';
+    echo '<td><input name="year" value = '.  $values['year'] .'></td>';
+    echo '<td><input name="kon" value = '.  $values['kon'] .'></td>';
+    echo '<td><input name="gender" value = '.  $values['gender'] .'></td>';
+    echo '<td><input name="bio" value = '.  $values['bio'] .'></td>';  
     
     echo '</tr>';
   }
