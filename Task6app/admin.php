@@ -50,7 +50,7 @@ if($stmt->execute()){
     $values['bio'] = $row["biogr"];
     echo '<tr>';
     foreach ($values as $v){
-      echo '<td>' $v '</td>';
+      echo '<td><input name="email" />'. $v .'</td>';
     }
     echo '</tr>';
   }
