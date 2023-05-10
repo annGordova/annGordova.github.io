@@ -45,7 +45,9 @@ function tootoo($l, $n, $e, $y, $k, $g, $b)
   foreach($stmt2 as $row)
   {
     $a = $row['pp'];
+    print('--');
     print($a);
+    print('--');
     //print($row);
   }
 
