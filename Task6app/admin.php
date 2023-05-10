@@ -57,11 +57,27 @@ if($stmt->execute()){
 echo '</table>';
 
 $stmt = $db->prepare("SELECT count(*) FROM sposob s WHERE s.tip = 'levitat'"); 
-
 $stmt->execute();
 foreach ($stmt as $v){
   foreach($v as $vv){
     print($vv);
+    break;
+  }
+}
+$stmt = $db->prepare("SELECT count(*) FROM sposob s WHERE s.tip = 'nevidim'"); 
+$stmt->execute();
+foreach ($stmt as $v){
+  foreach($v as $vv){
+    print($vv);
+    break;
+  }
+}
+$stmt = $db->prepare("SELECT count(*) FROM sposob s WHERE s.tip = 'stenochod'"); 
+$stmt->execute();
+foreach ($stmt as $v){
+  foreach($v as $vv){
+    print($vv);
+    break;
   }
 }
 
