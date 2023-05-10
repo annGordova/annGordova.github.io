@@ -8,7 +8,18 @@ function foo()
   return $db1;
 
 }
-
+function tootoo($l, $n, $e, $y, $k, $g, $b)
+{
+  $stmt = $db->prepare("UPDATE zayava SET namee = :my_namee, email = :my_email, godrod = :my_godrod, pol = :my_pol, konech = :my_konech, biogr = :my_biogr WHERE id_z IN (SELECT id_z FROM lopata WHERE login = :my_lolo)");
+  $stmt->bindParam(':my_namee', $n);
+  $stmt->bindParam(':my_email', $e);
+  $stmt->bindParam(':my_godrod', $y);
+  $stmt->bindParam(':my_pol', $g);
+  $stmt->bindParam(':my_konech', $k);
+  $stmt->bindParam(':my_biogr', $b);
+  $stmt->bindParam(':my_lolo', $l);
+  $stmt->execute();
+}
 /**
  * Задача 6. Реализовать вход администратора с использованием
  * HTTP-авторизации для просмотра и удаления результатов.
@@ -49,7 +60,7 @@ if($stmt->execute()){
     $values['gender'] = $row["pol"];
     $values['bio'] = $row["biogr"];
     echo '<tr>';
-    echo '<td><input name="login" value = '.  $values['login'] .'></td>';
+    echo '<td>'.  $values['login'] .'</td>';
     echo '<td><input name="name" value = '.  $values['name'] .'></td>';
     echo '<td><input name="email" value = '.  $values['email'] .'></td>';
     echo '<td><input name="year" value = '.  $values['year'] .'></td>';
@@ -93,6 +104,8 @@ foreach ($stmt as $v){
     break;
   }
 }
+
+
 
 
 
