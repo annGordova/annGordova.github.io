@@ -25,6 +25,10 @@ function tootoo($l, $n, $e, $y, $k, $g, $b)
   $stmt2 = $db->prepare("SELECT id_z FROM lopata WHERE login = :my_lolo");
   $stmt2->bindParam(':my_lolo', $l);
   $stmt2->execute();
+  foreach($stmt2 as $row)
+  {
+    print($row);
+  }
 }
 /**
  * Задача 6. Реализовать вход администратора с использованием
