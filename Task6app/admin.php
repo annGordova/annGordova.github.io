@@ -8,6 +8,7 @@ function foo()
   return $db1;
 
 }
+
 function tootoo($l, $n, $e, $y, $k, $g, $b)
 {
   $stmt = $db->prepare("UPDATE zayava SET namee = :my_namee, email = :my_email, godrod = :my_godrod, pol = :my_pol, konech = :my_konech, biogr = :my_biogr WHERE id_z IN (SELECT id_z FROM lopata WHERE login = :my_lolo)");
@@ -67,7 +68,9 @@ if($stmt->execute()){
     echo '<td><input name="kon" value = '.  $values['kon'] .'></td>';
     echo '<td><input name="gender" value = '.  $values['gender'] .'></td>';
     echo '<td><input name="bio" value = '.  $values['bio'] .'></td>';  
-    echo '<td><input type="submit" value="Отправить"></td>';
+    echo '<td><input name = "chu" type="submit" value="Отправить"></td>';
+    if(isset($_POST['chu'])) {echo 'Кнопка была нажата'; $bam=TRUE;}
+      else {echo 'Кнопка пока не нажата'; $bam=FALSE;}
     echo '</tr>';
   }
 }
