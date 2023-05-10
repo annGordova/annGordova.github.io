@@ -48,9 +48,9 @@ echo '</br>';
 <?php
 $db = foo();
 
-$stmt = $db->prepare("SELECT l.login, z.namee, z.email, z.godrod, z.pol, z.konech, z.biogr FROM lopata l, zayava z WHERE l.id_z = z.id_z");   
+$stmt = $db->prepare("SELECT l.login, z.namee, z.email, z.godrod, z.pol, z.konech, z.biogr FROM lopata l, zayava z WHERE l.id_z = z.id_z");  
 echo '<table border="1">';
-$shapka = array('login', 'name', 'email', 'year', 'kon', 'gender', 'bio', 'change');
+$shapka = array('login', 'name', 'email', 'year', 'kon', 'gender', 'bio');
 echo '<tr>';
     foreach ($shapka as $v){
       echo '<td>'. $v .'</td>';
@@ -87,6 +87,7 @@ if($stmt->execute()){
   }
 }
 echo '</table>';
+echo '<input name = "bubu" type="submit" value="Отправить">'
 foreach ($big as $b){
   foreach($b as $bb)
   {
