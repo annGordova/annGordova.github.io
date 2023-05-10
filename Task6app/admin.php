@@ -56,7 +56,8 @@ echo '<tr>';
       echo '<td>'. $v .'</td>';
     }
 echo '</tr>';
-
+$big = array();
+$i = 0;
 if($stmt->execute()){
 
 
@@ -68,6 +69,8 @@ if($stmt->execute()){
     $values['kon'] = $row["konech"];
     $values['gender'] = $row["pol"];
     $values['bio'] = $row["biogr"];
+    $big[$i] = $values;
+    $i=$i+1;
     echo '<tr>';
     echo '<td>'.  $values['login'] .'</td>';
     echo '<td><input name="name" value = '.  $values['name'] .'></td>';
@@ -84,7 +87,12 @@ if($stmt->execute()){
   }
 }
 echo '</table>';
-
+foreach ($big as $b){
+  foreach($b as $bb)
+  {
+    print($bb);
+  }
+}
 ?>
 </form>
 <?php
