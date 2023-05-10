@@ -58,6 +58,7 @@ echo '<tr>';
 echo '</tr>';
 
 if($stmt->execute()){
+  $stm = $stmt;
   foreach($stmt as $row){
     $values['login'] = $row['login'];
     $values['name']= $row["namee"];
@@ -83,7 +84,7 @@ if($stmt->execute()){
   }
 }
 echo '</table>';
-foreach($stmt as $row){
+foreach($stm as $row){
   foreach($row as $r){
     echo $r;
   }
