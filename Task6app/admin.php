@@ -31,7 +31,7 @@ if (empty($_SERVER['PHP_AUTH_USER']) ||
 print('Вы успешно авторизовались и видите защищенные паролем данные.');
 $db = foo();
 $stmt = $db->prepare("SELECT l.login, z.namee, z.email, z.godrod, z.pol, z.konech, z.biogr FROM lopata l, zayava z WHERE l.id_z = z.id_z");   
-
+echo '<table border="1">';
 if($stmt->execute()){
   foreach($stmt as $row){
     $values['login'] = $row['login'];
@@ -43,10 +43,14 @@ if($stmt->execute()){
     $values['bio'] = $row["biogr"];
 
     print($values['name']);    
-
+    echo '<tr>';
+    foreach ($values as $v){
+      echo '<td>'. $v .'</td>';
+    }
+    echo '</tr>';
   }
 }
-
+echo '</table>';
 $rows = 20; // количество строк, tr
 $cols = 20; // количество столбцов, td
 
