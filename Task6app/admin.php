@@ -51,6 +51,7 @@ if($stmt->execute()){
     echo '<tr>';
     echo '<td><input name="login" value = '.  $values['login'] .'></td>';
     echo '<td><input name="login" value = '.  $values['name'] .'></td>';
+    echo '<td><input name="login" value = '.  $values['email'] .'></td>';
     echo '<td><input name="login" value = '.  $values['year'] .'></td>';
     echo '<td><input name="login" value = '.  $values['kon'] .'></td>';
     echo '<td><input name="login" value = '.  $values['gender'] .'></td>';
