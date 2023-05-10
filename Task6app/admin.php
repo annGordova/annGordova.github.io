@@ -56,7 +56,8 @@ echo '<tr>';
       echo '<td>'. $v .'</td>';
     }
 echo '</tr>';
-$b = FALSE;
+$big_values = array(array());
+$i=0;
 if($stmt->execute()){
   foreach($stmt as $row){
     $values['login'] = $row['login'];
@@ -75,13 +76,21 @@ if($stmt->execute()){
     echo '<td><input name="gender" value = '.  $values['gender'] .'></td>';
     echo '<td><input name="bio" value = '.  $values['bio'] .'></td>';  
     echo '<td><input name = "chu" type="submit" value="Отправить"></td>';
-    if(isset($_POST['chu']) and $b != TRUE) 
-    {tootoo($values['login'], $_POST['name'], $_POST['email'], $_POST['year'], $_POST['kon'], $_POST['gender'], $_POST['bio']);$b = TRUE;}
+    $bigvalues[$i]=$values;
+    $i+=1;
+    //if(isset($_POST['chu']) and $b != TRUE) 
+    //{tootoo($values['login'], $_POST['name'], $_POST['email'], $_POST['year'], $_POST['kon'], $_POST['gender'], $_POST['bio']);$b = TRUE;}
     
     echo '</tr>';
   }
 }
 echo '</table>';
+foreach($big_values as $b){
+  foreach($b as $bb)
+  {
+    print($bb;)
+  }
+}
 ?>
 </form>
 <?php
