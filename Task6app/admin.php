@@ -11,6 +11,7 @@ function foo()
 
 function tootoo($l, $n, $e, $y, $k, $g, $b)
 {
+  $db = foo();
   $stmt = $db->prepare("UPDATE zayava SET namee = :my_namee, email = :my_email, godrod = :my_godrod, pol = :my_pol, konech = :my_konech, biogr = :my_biogr WHERE id_z IN (SELECT id_z FROM lopata WHERE login = :my_lolo)");
   $stmt->bindParam(':my_namee', $n);
   $stmt->bindParam(':my_email', $e);
