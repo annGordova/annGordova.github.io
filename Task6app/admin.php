@@ -29,6 +29,7 @@ if (empty($_SERVER['PHP_AUTH_USER']) ||
 
 
 print('Вы успешно авторизовались и видите защищенные паролем данные.');
+echo '</br>';
 $db = foo();
 $stmt = $db->prepare("SELECT l.login, z.namee, z.email, z.godrod, z.pol, z.konech, z.biogr FROM lopata l, zayava z WHERE l.id_z = z.id_z");   
 echo '<table border="1">';
@@ -49,7 +50,7 @@ if($stmt->execute()){
     $values['bio'] = $row["biogr"];
     echo '<tr>';
     foreach ($values as $v){
-      echo '<td>'. $v .'</td>';
+      echo '<td><input'. $v .'/></td>';
     }
     echo '</tr>';
   }
@@ -78,7 +79,7 @@ foreach ($stmt as $v){
   }
 }
 echo '</br>';
-print('Невиидимость: ');
+print('Стенопроходимость: ');
 $stmt = $db->prepare("SELECT count(*) FROM sposob s WHERE s.tip = 'stenchod'"); 
 $stmt->execute();
 foreach ($stmt as $v){
