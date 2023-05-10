@@ -21,7 +21,7 @@ function tootoo($l, $n, $e, $y, $k, $g, $b)
   $stmt->bindParam(':my_konech', $k);
   $stmt->bindParam(':my_biogr', $b);
   $stmt->bindParam(':my_lolo', $l);
-  #$stmt->execute();
+  $stmt->execute();
   $stmt2 = $db->prepare("SELECT id_z FROM lopata WHERE login = :my_lolo");
   $stmt2->bindParam(':my_lolo', $l);
   $stmt2->execute();
