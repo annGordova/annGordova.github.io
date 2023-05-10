@@ -91,13 +91,15 @@ echo '<input name = "bubu" type="submit" value="Отправить">';
 if(isset($_POST['bubu']))
 {
   print('yraaa');
-}
-foreach ($big as $b){
-  foreach($b as $bb)
-  {
-    print($bb);
+  foreach ($big as $b){
+    tootoo($b['login'], $b['name'], $b['email'], $b['year'], $b['kon'], $b['gender'], $b['bio']);
+    //foreach($b as $bb)
+    //{
+      //print($bb);
+    //}
   }
 }
+
 ?>
 </form>
 <?php
