@@ -30,8 +30,7 @@ if (empty($_SERVER['PHP_AUTH_USER']) ||
 
 print('Вы успешно авторизовались и видите защищенные паролем данные.');
 $db = foo();
-$stmt = $db->prepare("SELECT l.login, z.namee, z.email, z.godrod, z.pol, z.konech, z.biogr FROM lopata l, zayava z WHERE l.id_z = z.id_z");
-$stmt->bindParam();     
+$stmt = $db->prepare("SELECT l.login, z.namee, z.email, z.godrod, z.pol, z.konech, z.biogr FROM lopata l, zayava z WHERE l.id_z = z.id_z");   
 
 if($stmt->execute()){
   foreach($stmt as $row){
