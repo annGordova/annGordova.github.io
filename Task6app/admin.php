@@ -49,7 +49,7 @@ if($stmt->execute()){
     $values['gender'] = $row["pol"];
     $values['bio'] = $row["biogr"];
     echo '<tr>';
-    echo '<td><input name="login"'.  $values['login'] .'/></td>';
+    echo '<td><input name="login" value = '.  $values['login'] .'/></td>';
     echo '<td><input name="name" />'. $values['name'] .'</td>';
     echo '<td><input name="email" />'. $values['email'] .'</td>';
     echo '<td><input name="year" />'. $values['year'] .'</td>';
