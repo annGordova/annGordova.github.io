@@ -88,6 +88,10 @@ if($stmt->execute()){
 }
 echo '</table>';
 echo '<input name = "bubu" type="submit" value="Отправить">';
+if(isset($_POST['bubu']))
+{
+  print('yraaa');
+}
 foreach ($big as $b){
   foreach($b as $bb)
   {
