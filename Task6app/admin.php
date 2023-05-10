@@ -25,6 +25,14 @@ function tootoo($l, $n, $e, $y, $k, $g, $b)
   $stmt2 = $db->prepare("SELECT id_z FROM lopata WHERE login = :my_lolo");
   $stmt2->bindParam(':my_lolo', $l);
   $stmt2->execute();
+  print($n);
+  print($e);
+  print($y);
+  print($g);
+  print($k);
+  print($b);
+  print($l);
+  
   foreach($stmt2 as $row)
   {
     $a = $row['id_z'];
