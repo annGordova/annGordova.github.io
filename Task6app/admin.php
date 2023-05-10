@@ -56,6 +56,9 @@ if($stmt->execute()){
 }
 echo '</table>';
 
+print('Статистика');
+echo '</br>';
+print('Левитация: ');
 $stmt = $db->prepare("SELECT count(*) FROM sposob s WHERE s.tip = 'levitat'"); 
 $stmt->execute();
 foreach ($stmt as $v){
@@ -64,6 +67,8 @@ foreach ($stmt as $v){
     break;
   }
 }
+echo '</br>';
+print('Невиидимость: ');
 $stmt = $db->prepare("SELECT count(*) FROM sposob s WHERE s.tip = 'nevidim'"); 
 $stmt->execute();
 foreach ($stmt as $v){
@@ -72,6 +77,8 @@ foreach ($stmt as $v){
     break;
   }
 }
+echo '</br>';
+print('Невиидимость: ');
 $stmt = $db->prepare("SELECT count(*) FROM sposob s WHERE s.tip = 'stenchod'"); 
 $stmt->execute();
 foreach ($stmt as $v){
