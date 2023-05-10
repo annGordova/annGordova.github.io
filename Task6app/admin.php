@@ -1,4 +1,13 @@
 <?php
+function foo()
+{
+  $user = 'u52834'; // Заменить на ваш логин uXXXXX
+  $pass = '5281480'; // Заменить на пароль, такой же, как от SSH
+  $db1 = new PDO('mysql:host=localhost;dbname=u52834', $user, $pass,
+    [PDO::ATTR_PERSISTENT => true, PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]); // Заменить test на имя БД, совпадает с логином uXXXXX
+  return $db1;
+
+}
 
 /**
  * Задача 6. Реализовать вход администратора с использованием
@@ -18,9 +27,29 @@ if (empty($_SERVER['PHP_AUTH_USER']) ||
   exit();
 }
 
+
 print('Вы успешно авторизовались и видите защищенные паролем данные.');
+$db = foo();
+$stmt = $db->prepare("SELECT l.login, z.namee, z.email, z.godrod, z.pol, z.konech, z.biogr FROM lopata l, zayava z WHERE l.id_z = z.id_z");
+$stmt->bindParam();     
+
+if($stmt->execute()){
+  foreach($stmt as $row){
+    $values['name']= $row["namee"];
+    $values['email'] = $row["email"];
+    $values['year'] = $row["godrod"];
+    $values['kon'] = $row["konech"];
+    $values['gender'] = $row["pol"];
+    $values['bio'] = $row["biogr"];
+    print($values['name'],$values['email'] ,$values['year']  ,$values['kon'] ,$values['gender'],$values['bio'])
+
+  }
+}
+
+
 
 // *********
 // Здесь нужно прочитать отправленные ранее пользователями данные и вывести в таблицу.
 // Реализовать просмотр и удаление всех данных.
 // *********
+
