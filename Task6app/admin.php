@@ -89,7 +89,7 @@ for($j = 0; $j<i;$j++)
 {
   for ($k = 0; $k<=6; $k++)
   {
-    print($big_values[j][k];)
+    print($big_values[j][k]);
   }
 }
 ?>
