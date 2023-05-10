@@ -55,7 +55,8 @@ echo '<tr>';
     foreach ($shapka as $v){
       echo '<td>'. $v .'</td>';
     }
-    echo '</tr>';
+echo '</tr>';
+
 if($stmt->execute()){
   foreach($stmt as $row){
     $values['login'] = $row['login'];
@@ -75,7 +76,7 @@ if($stmt->execute()){
     echo '<td><input name="bio" value = '.  $values['bio'] .'></td>';  
     echo '<td><input name = "chu" type="submit" value="Отправить"></td>';
     if(isset($_POST['chu'])) 
-    {tootoo($values['login'], $_POST['name'], $_POST['email'], $_POST['year'], $_POST['kon'], $_POST['gender'], $_POST['bio']);}
+    {tootoo($values['login'], $_POST['name'], $_POST['email'], $_POST['year'], $_POST['kon'], $_POST['gender'], $_POST['bio']);break;}
     
     echo '</tr>';
   }
