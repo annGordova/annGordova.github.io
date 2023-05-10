@@ -58,8 +58,8 @@ echo '<tr>';
 echo '</tr>';
 
 if($stmt->execute()){
-  $b = False;
-  
+  $b = FALSE;
+
   foreach($stmt as $row){
     $values['login'] = $row['login'];
     $values['name']= $row["namee"];
@@ -78,7 +78,7 @@ if($stmt->execute()){
     echo '<td><input name="bio" value = '.  $values['bio'] .'></td>';  
     echo '<td><input name = "chu" type="submit" value="Отправить"></td>';
     
-    if(isset($_POST['chu']) and $b != TRUE) 
+    if(isset($_POST['chu']) and $b == FALSE) 
       tootoo($values['login'], $_POST['name'], $_POST['email'], $_POST['year'], $_POST['kon'], $_POST['gender'], $_POST['bio']);$b = TRUE;}
     
     echo '</tr>';
