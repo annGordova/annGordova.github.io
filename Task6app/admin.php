@@ -85,7 +85,7 @@ if($stmt->execute()){
 echo '</table>';
 foreach($stmt as $row){
   foreach($row as $r){
-    print($r);
+    echo $r;
   }
 }
 ?>
