@@ -32,6 +32,12 @@ print('Вы успешно авторизовались и видите защи
 $db = foo();
 $stmt = $db->prepare("SELECT l.login, z.namee, z.email, z.godrod, z.pol, z.konech, z.biogr FROM lopata l, zayava z WHERE l.id_z = z.id_z");   
 echo '<table border="1">';
+$shapka = array('login', 'name', 'email', 'year', 'kon', 'gender', 'bio');
+echo '<tr>';
+    foreach ($shapka as $v){
+      echo '<td>'. $v .'</td>';
+    }
+    echo '</tr>';
 if($stmt->execute()){
   foreach($stmt as $row){
     $values['login'] = $row['login'];
