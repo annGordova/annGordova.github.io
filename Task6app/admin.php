@@ -56,7 +56,8 @@ if($stmt->execute()){
 }
 echo '</table>';
 
-$stmt = $db->prepare("SELECT count(*) FROM sposob s WHERE s.tip = 'stenochod'"); 
+$stmt = $db->prepare("SELECT count(*) FROM sposob s WHERE s.tip = 'levitat'"); 
+
 $stmt->execute();
 foreach ($stmt as $v){
   foreach($v as $vv){
