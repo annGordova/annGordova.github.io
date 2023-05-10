@@ -44,7 +44,7 @@ if (empty($_SERVER['PHP_AUTH_USER']) ||
 print('Вы успешно авторизовались и видите защищенные паролем данные.');
 echo '</br>';
 ?>
-<form method="POST">
+<form action = "index.php" method="POST">
 <?php
 $db = foo();
 
