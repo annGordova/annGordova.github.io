@@ -56,7 +56,7 @@ if($stmt->execute()){
     echo '<td><input name="kon" value = '.  $values['kon'] .'></td>';
     echo '<td><input name="gender" value = '.  $values['gender'] .'></td>';
     echo '<td><input name="bio" value = '.  $values['bio'] .'></td>';  
-    echo '<input type="submit" value="Отправить">';
+    echo '<td><input type="submit" value="Отправить"></td>';
     echo '</tr>';
   }
 }
