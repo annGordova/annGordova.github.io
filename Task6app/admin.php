@@ -40,10 +40,11 @@ if($stmt->execute()){
     $values['kon'] = $row["konech"];
     $values['gender'] = $row["pol"];
     $values['bio'] = $row["biogr"];
-    
+    print($values['name']);    
 
   }
 }
+
 
 
 
