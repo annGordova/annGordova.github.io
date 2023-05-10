@@ -59,7 +59,9 @@ echo '</table>';
 $stmt = $db->prepare("SELECT count(*) FROM sposob s WHERE s.tip = 'stenochod'"); 
 $stmt->execute();
 foreach ($stmt as $v){
-  print ($v) ;
+  foreach($v as $vv){
+    print($vv);
+  }
 }
 
 
