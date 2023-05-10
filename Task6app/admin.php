@@ -121,6 +121,7 @@ echo '<input name = "bubu" type="submit" value="Отправить">';
 if(isset($_POST['bubu']))
 {
   print('yraaa');
+  
   foreach ($big as $b){
     //print($b['login']); print($b['name']);
     tootoo($b['login'], $_POST['name'], $_POST['email'], $_POST['year'], $_POST['kon'], $_POST['gender'], $_POST['bio']);
