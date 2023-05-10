@@ -42,6 +42,7 @@ if($stmt->execute()){
   foreach($stmt as $row){
     $values['login'] = $row['login'];
     $values['name']= $row["namee"];
+    $values['email'] = $row["email"];
     $values['year'] = $row["godrod"];
     $values['kon'] = $row["konech"];
     $values['gender'] = $row["pol"];
