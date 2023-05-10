@@ -29,7 +29,7 @@ if (empty($_SERVER['PHP_AUTH_USER']) ||
 
 
 print('Вы успешно авторизовались и видите защищенные паролем данные.');
-echo '</br>';
+echo '<br/>';
 $db = foo();
 $stmt = $db->prepare("SELECT l.login, z.namee, z.email, z.godrod, z.pol, z.konech, z.biogr FROM lopata l, zayava z WHERE l.id_z = z.id_z");   
 echo '<table border="1">';
@@ -58,7 +58,7 @@ if($stmt->execute()){
 echo '</table>';
 
 print('Статистика');
-echo '</br>';
+
 print('Левитация: ');
 $stmt = $db->prepare("SELECT count(*) FROM sposob s WHERE s.tip = 'levitat'"); 
 $stmt->execute();
@@ -68,7 +68,7 @@ foreach ($stmt as $v){
     break;
   }
 }
-echo '</br>';
+
 print('Невиидимость: ');
 $stmt = $db->prepare("SELECT count(*) FROM sposob s WHERE s.tip = 'nevidim'"); 
 $stmt->execute();
@@ -78,7 +78,7 @@ foreach ($stmt as $v){
     break;
   }
 }
-echo '</br>';
+
 print('Стенопроходимость: ');
 $stmt = $db->prepare("SELECT count(*) FROM sposob s WHERE s.tip = 'stenchod'"); 
 $stmt->execute();
