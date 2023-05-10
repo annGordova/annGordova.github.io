@@ -33,7 +33,7 @@ echo '</br>';
 $db = foo();
 $stmt = $db->prepare("SELECT l.login, z.namee, z.email, z.godrod, z.pol, z.konech, z.biogr FROM lopata l, zayava z WHERE l.id_z = z.id_z");   
 echo '<table border="1">';
-$shapka = array('login', 'name', 'email', 'year', 'kon', 'gender', 'bio');
+$shapka = array('login', 'name', 'email', 'year', 'kon', 'gender', 'bio', 'change');
 echo '<tr>';
     foreach ($shapka as $v){
       echo '<td>'. $v .'</td>';
@@ -56,7 +56,7 @@ if($stmt->execute()){
     echo '<td><input name="kon" value = '.  $values['kon'] .'></td>';
     echo '<td><input name="gender" value = '.  $values['gender'] .'></td>';
     echo '<td><input name="bio" value = '.  $values['bio'] .'></td>';  
-    
+    echo '<input type="submit" value="Отправить">'
     echo '</tr>';
   }
 }
