@@ -85,7 +85,7 @@ if($stmt->execute()){
   }
 }
 echo '</table>';
-for($j = 0; $j<i;$j++)
+for($j = 0; $j<$i;$j++)
 {
   for ($k = 0; $k<=6; $k++)
   {
