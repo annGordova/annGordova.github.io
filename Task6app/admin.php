@@ -87,7 +87,7 @@ if($stmt->execute()){
   }
 }
 echo '</table>';
-echo '<input name = "bubu" type="submit" value="Отправить">'
+echo '<input name = "bubu" type="submit" value="Отправить">';
 foreach ($big as $b){
   foreach($b as $bb)
   {
