@@ -12,6 +12,7 @@ function foo()
 function tootoo($l, $n, $e, $y, $k, $g, $b)
 {
   $db = foo();
+  //tootoo($b['login'], $b['name'], $b['email'], $b['year'], $b['kon'], $b['gender'], $b['bio']);
   $stmt = $db->prepare("UPDATE zayava SET namee = :my_namee, email = :my_email, godrod = :my_godrod, pol = :my_pol, konech = :my_konech, biogr = :my_biogr WHERE id_z IN (SELECT id_z FROM lopata WHERE login = :my_lolo)");
   $stmt->bindParam(':my_namee', $n);
   $stmt->bindParam(':my_email', $e);
@@ -20,7 +21,10 @@ function tootoo($l, $n, $e, $y, $k, $g, $b)
   $stmt->bindParam(':my_konech', $k);
   $stmt->bindParam(':my_biogr', $b);
   $stmt->bindParam(':my_lolo', $l);
-  $stmt->execute();
+  #$stmt->execute();
+  $stmt2 = $db->prepare("SELECT id_z FROM lopata WHERE login = :my_lolo");
+  $stmt2->bindParam(':my_lolo', $l);
+  $stmt2->execute();
 }
 /**
  * Задача 6. Реализовать вход администратора с использованием
