@@ -85,10 +85,11 @@ if($stmt->execute()){
   }
 }
 echo '</table>';
-foreach($big_values as $b){
-  foreach($b as $bb)
+for($j = 0; $j<i;$j++)
+{
+  for ($k = 0; $k<=6; $k++)
   {
-    print($bb);
+    print($big_values[j][k];)
   }
 }
 ?>
