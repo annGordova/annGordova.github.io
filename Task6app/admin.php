@@ -92,6 +92,7 @@ if(isset($_POST['bubu']))
 {
   print('yraaa');
   foreach ($big as $b){
+    print($b['login']); print($b['name']);
     tootoo($b['login'], $b['name'], $b['email'], $b['year'], $b['kon'], $b['gender'], $b['bio']);
     //foreach($b as $bb)
     //{
