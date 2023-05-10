@@ -50,12 +50,13 @@ if($stmt->execute()){
     $values['bio'] = $row["biogr"];
     echo '<tr>';
     echo '<td><input name="login" value = '.  $values['login'] .'></td>';
-    echo '<td><input name="name" />'. $values['name'] .'</td>';
-    echo '<td><input name="email" />'. $values['email'] .'</td>';
-    echo '<td><input name="year" />'. $values['year'] .'</td>';
-    echo '<td><input name="kon" />'. $values['kon'] .'</td>';
-    echo '<td><input name="gender" />'. $values['gender'] .'</td>';
-    echo '<td><input name="bio" />'. $values['bio'] .'</td>';
+    echo '<td><input name="login" value = '.  $values['name'] .'></td>';
+    echo '<td><input name="login" value = '.  $values['year'] .'></td>';
+    echo '<td><input name="login" value = '.  $values['kon'] .'></td>';
+    echo '<td><input name="login" value = '.  $values['gender'] .'></td>';
+    echo '<td><input name="login" value = '.  $values['bio'] .'></td>';
+    echo '<td><input name="login" value = '.  $values['login'] .'></td>';
+    
     
     echo '</tr>';
   }
