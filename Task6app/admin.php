@@ -88,7 +88,7 @@ echo '</table>';
 foreach($big_values as $b){
   foreach($b as $bb)
   {
-    print($bb;)
+    print($bb);
   }
 }
 ?>
