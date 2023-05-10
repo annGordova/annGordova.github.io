@@ -79,7 +79,7 @@ if($stmt->execute()){
     echo '<td><input name = "chu" type="submit" value="Отправить"></td>';
     
     if(isset($_POST['chu']) and $b == FALSE) 
-      tootoo($values['login'], $_POST['name'], $_POST['email'], $_POST['year'], $_POST['kon'], $_POST['gender'], $_POST['bio']);$b = TRUE;}
+      tootoo($values['login'], $_POST['name'], $_POST['email'], $_POST['year'], $_POST['kon'], $_POST['gender'], $_POST['bio']);break;}
     
     echo '</tr>';
   }
