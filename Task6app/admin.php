@@ -49,9 +49,14 @@ if($stmt->execute()){
     $values['gender'] = $row["pol"];
     $values['bio'] = $row["biogr"];
     echo '<tr>';
-    foreach ($values as $v){
-      echo '<td><input name="email" />'. $v .'</td>';
-    }
+    echo '<td><input name="login" />'. $v .'</td>';
+    echo '<td><input name="name" />'. $v .'</td>';
+    echo '<td><input name="email" />'. $v .'</td>';
+    echo '<td><input name="year" />'. $v .'</td>';
+    echo '<td><input name="kon" />'. $v .'</td>';
+    echo '<td><input name="gender" />'. $v .'</td>';
+    echo '<td><input name="bio" />'. $v .'</td>';
+    
     echo '</tr>';
   }
 }
