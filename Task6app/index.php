@@ -114,7 +114,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     $db = foo();
     $stmt = $db->prepare("SELECT l.login, z.namee, z.email, z.godrod, z.pol, z.konech, z.biogr FROM lopata l, zayava z WHERE l.login = :my_lolo and l.id_z = z.id_z");
     $stmt->bindParam(':my_lolo',  $_SESSION['login']);     
-
+    $ss = $_SESSION['login'];
 
     if($stmt->execute()){
       foreach($stmt as $row){
@@ -131,7 +131,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     }
     
     $sp = array();
-    $stmt = $db->prepare("SELECT s.tip FROM lopata l, zayava z, sposob s, svyaz sz WHERE l.login =  $_SESSION['login'] and l.id_z = z.id_z and z.id_z = sz.id_z and sz.id_s = s.id_s");  
+    $stmt = $db->prepare("SELECT s.tip FROM lopata l, zayava z, sposob s, svyaz sz WHERE l.login =  $ss and l.id_z = z.id_z and z.id_z = sz.id_z and sz.id_s = s.id_s");  
     if($stmt->execute()){
       foreach($stmt as $row){
         array_push($sp, $row['tip']);
