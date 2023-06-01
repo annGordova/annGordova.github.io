@@ -1,0 +1,154 @@
+video {
+
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+  
+img{
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    
+}
+.content{
+    padding-top: 10%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+.textph{
+    padding-top: 20%;
+    padding-bottom: 20%;
+    
+}
+header{   
+    background-image: url("mmm1.JPG");  
+    background-position: center center;    
+    background-repeat: no-repeat;    
+    background-attachment: fixed;
+    background-size: cover;   
+    
+}
+.head_title{
+    padding: 15%;
+    text-align: center;
+    color: #FFF;
+}
+.second_title{
+    text-align: center;
+    padding-bottom: 10%;
+}
+#navbar{
+
+    background-color: #2d5f71;
+}
+#navbar ul {
+   
+    width: auto;
+    display: none;
+    background-color: #2d5f71;
+    position: absolute;
+    top: 100%;
+}
+#navbar li:hover ul {
+    display: block; 
+}
+#navbar, #navbar ul {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 5px;
+    list-style-type: none;
+}
+#navbar {
+    height: 30px;
+    display: flex; 
+    justify-content: space-evenly;
+    min-width: 470px;
+}
+#navbar li { 
+    float: left;
+    position: relative;
+    height: 100%;
+}
+#navbar li a {
+    display: block;
+    padding: 5px;
+    color: #fff;
+    text-decoration: none; 
+}
+
+#navbar ul li { 
+    float: none;  
+    padding-top: 15px;
+    
+
+}
+
+#navbar ul li:hover { 
+    background-color: #fff; 
+}
+
+
+
+
+#menu * { 
+    padding:0; 
+    margin: 0; 
+    list-style-type:none;
+}
+
+#menu a { 
+    display: block; 
+    text-decoration: none; 
+    color: #fff;    
+}
+
+  
+
+#menu ul li ul li {
+
+    padding-top: 3px; 
+    padding-bottom:3px; 
+    padding-left: 3px; 
+    padding-right: 3px; 
+    background: #2d5f71;
+}
+  
+#menu ul li {
+    width:100vw;  
+    background: #2d5f71;
+}
+#menu ul li a { 
+    padding: 15px 10px;
+}
+#menu li {
+    position:relative;    
+}
+#menu ul li ul, #menu:hover ul li ul, #menu:hover ul li:hover ul li ul {
+    display:none;
+    list-style-type:none;
+    width: 20px;
+}
+#menu:hover ul, #menu:hover ul li:hover ul, #menu:hover ul li:hover ul li:hover ul {
+    display:block;
+}
+#menu:hover ul li:hover ul li:hover ul {
+    position: absolute;
+  
+}
+#menu:hover ul li:hover ul {
+    position: absolute;
+    
+  
+}
+#menu>ul>li:hover>ul { 
+      top:100%;
+}
+.menu_bu{
+    color: #fff;
+    
+}
