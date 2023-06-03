@@ -1,9 +1,12 @@
+html {
+  scroll-behavior: smooth;
+}
 video {
 
     width: 100%;
     height: auto;
     max-height: 100%;
-    margin-top: 2%;
+    margin-top: 20%;
     margin-bottom: 2%;
 }
   
@@ -21,12 +24,21 @@ img{
     margin-right: 5%;
 }
 .textph{
-    padding-top: 20%;
-    padding-bottom: 20%;
+    margin-top: 10%;
+    
+    background-color: #2d5f71;
     
 }
+.textph img{
+    width: 100%;
+}
+.textph h2{
+    color:#fff;
+    text-align: center;
+    margin-top: 10%;
+}
 header{   
-    background-image: url("mmm1.jpg");  
+    background-image: url("mmm1.JPG");  
     background-position: center center;    
     background-repeat: no-repeat;    
     background-attachment: fixed;
@@ -45,12 +57,14 @@ header{
 #navbar{
 
     background-color: #2d5f71;
+    z-index: 10;
 }
 #navbar ul {
    
     width: auto;
     display: none;
     background-color: #2d5f71;
+    z-index: 10;
     position: absolute;
     top: 100%;
 }
@@ -78,6 +92,7 @@ header{
     display: block;
     padding: 5px;
     color: #fff;
+    font-weight: bold;
     text-decoration: none; 
 }
 
@@ -89,7 +104,7 @@ header{
 }
 
 #navbar ul li:hover { 
-    background-color: #fff; 
+    background-color: #0ea7df; 
 }
 
 
@@ -116,11 +131,13 @@ header{
     padding-left: 3px; 
     padding-right: 3px; 
     background: #2d5f71;
+    z-index: 10;
 }
   
 #menu ul li {
     width:100vw;  
     background: #2d5f71;
+    
 }
 #menu ul li a { 
     padding: 15px 10px;
@@ -150,5 +167,15 @@ header{
 }
 .menu_bu{
     color: #fff;
+    
+}
+@media (min-width: 768px){
+    .textph img{
+        width: 200%;
+    }
+    .textph h2{
+
+        text-align: left;
+}
     
 }
